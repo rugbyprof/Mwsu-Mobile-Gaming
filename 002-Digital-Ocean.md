@@ -1,5 +1,5 @@
 ### Assignment 2 - Create your own server.
-#### Due: TBD hours (1 minute before midnight).
+#### Due: TBD 
 
 -----
 
