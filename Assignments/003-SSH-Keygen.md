@@ -9,10 +9,11 @@
 
 
 ### On Github
-- To add the ssh key you generated to github, follow this [tutorial](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/).
-- Warning: `pbcopy` may not work on your machine, so do what I did in class
+- First generate the key using this [tutorial](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/).
+- Warning: The tutorial uses `pbcopy` wich may not work on some distros, so do what I did in class
 - Note: the `~` on unix means "your home directory" so `~/.ssh` = `your/home/dir/.ssh/`
 - Type the following commands: 
     - `cd ~/.ssh`
     - `more id_rsa.pub`
 - Now just highlight and copy the key to your clipboard
+- Continue with the tutorial.
