@@ -1,4 +1,4 @@
-### Assignment 3 - Set up SSh Keys.
+### Assignment 3 (optional) - Set up SSh Keys.
 #### Due: Tuesday June 7th by Class time. 
 -----
 
