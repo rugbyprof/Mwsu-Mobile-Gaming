@@ -1,0 +1,99 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8" />
+	<title>Phaser - Making your first game, part 1</title>
+	<script type="text/javascript" src="js/phaser.min.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+
+var platforms;
+var score = 0;
+var scoreText;
+
+function preload() {
+    game.load.image('space', 'assets/space.jpg');
+    game.load.spritesheet('ship', 'assets/pirate_space_ship_alpha.png', 128, 128);
+}
+
+function create() {
+
+    game.physics.startSystem(Phaser.Physics.ARCADE);
+    
+    //  A simple background for our game
+    game.add.sprite(0, 0, 'space');
+
+    x = game.world.centerX - (128/2);
+    y = game.world.centerY - (128/2);
+
+    ship = game.add.sprite(x,y, 'ship');
+    
+    ship.frame = 16
+
+    //  We need to enable physics on the player
+    game.physics.arcade.enable(ship);
+
+    //  Player physics properties. Give the little guy a slight bounce.
+    ship.body.bounce.y = 0.2;
+    ship.body.gravity.y = 300;
+    ship.body.collideWorldBounds = true;
+
+    //  Our two animations, walking left and right.
+    ship.animations.add('left', [126, 124, 122, 120,118,116,114,112,94],30,false,true);
+    ship.animations.add('right', [126,16,18,20,22,24,26,28,30],30,false,true);
+}
+
+function update() {
+    
+    cursors = game.input.keyboard.createCursorKeys();
+    
+    //  Reset the players velocity (movement)
+    ship.body.velocity.x = 0;
+
+    if (cursors.left.isDown)
+    {
+        //  Move to the left
+        ship.body.velocity.x = -150;
+
+        ship.animations.play('left',10,false,false);
+        ship.frame = 94;
+    }
+    else if (cursors.right.isDown)
+    {
+        //  Move to the right
+        ship.body.velocity.x = 150;
+
+        ship.animations.play('right',10,false,false);
+        ship.frame = 30;
+    }
+    else
+    {
+        //  Stand still
+        ship.animations.stop();
+        ship.frame = 4;
+    }
+
+    //  Allow the player to jump if they are touching the ground.
+    if (cursors.up.isDown && ship.body.touching.down)
+    {
+        ship.body.velocity.y = -350;
+    }
+   
+}
+
+
+</script>
+
+</body>
+</html>
+
+            
