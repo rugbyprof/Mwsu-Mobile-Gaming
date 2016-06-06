@@ -7,8 +7,10 @@ This assignment is simply uploading and unzipping a folder onto your server so w
 
 #### Log In
 - Log in to your server using some terminal client.
-- For example my server (as of right now) has an ip address of `162.243.116.46` so I would type: `ssh griffin@162.243.116.46` or if you want to connect as root: `ssh root@162.243.116.46`.
-- Put in your password.
+- For example my server (as of right now) has an ip address of `162.243.116.46` so I would type:
+    - `ssh griffin@162.243.116.46` 
+    - or if you want to connect as root: `ssh root@162.243.116.46`.
+- Now put in your password.
 
 #### Go to web root
 - Change directory into your servers web root. For us I will assume that the web root is `/var/www/html/`. The command would be `cd /var/www/html/` 
