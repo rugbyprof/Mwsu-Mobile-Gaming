@@ -27,7 +27,7 @@ We will be using github this semester as a means of communicating, storing docum
 a means to push your files to a central repository. So if your using a lab or personal machine, there's a centralized location that we both have access to.
 
 #### Create a Github account. 
-(30%)
+(20%)
 - When you create a Github account, you must choose a `username`. 
 - This is very important to remember, because you will email it to me in the next part of this assignment.
 - Create a repository named:
@@ -36,7 +36,7 @@ a means to push your files to a central repository. So if your using a lab or pe
 - Check the box that says: "Add a README.md file"
 
 #### Edit the README.md 
-(30%)
+(20%)
 - Edit the readme file on github and place your contact information inside along with a picture of YOU. NOT an avatar. NOT a thumbnail. But an easily identifiable picture of you.
 - Your readme should include:
     - Your image (it must be between 200x200 and 500x500 or similar)
@@ -52,7 +52,7 @@ a means to push your files to a central repository. So if your using a lab or pe
 
 
 #### Send me an email:
-
+(40%)
 - `To`: terry.griffin@mwsu.edu
 - `Subject`: Mwsu 2D Gaming - Assignment 1 
 
