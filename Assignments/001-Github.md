@@ -67,7 +67,8 @@ Your repository name and your github username are NOT the same thing.
 
 Here is an example using our course repository:
 ```
-Hello Professor Griffin,<br><br>
+Hello Professor Griffin,
+
 My Name is: Terry Griffin
 My Github username is: rugbyprof
 My Repository name is: Mwsu-Mobile-Gaming
