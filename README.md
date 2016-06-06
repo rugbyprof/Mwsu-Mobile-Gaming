@@ -41,14 +41,15 @@ Instructors Note<sup>**5**</sup>
 
 - Attending class is one of the primary keys to doing well in this class. Students may be dropped for excessive absences. There is no distinction made between excused and unexcused. 
 
-- Make-up exams are not given. If I see fit, then I will replace a missed exam with your final exam test grade. If you do miss an exam without prior approval, a letter from the dean of students will be needed as an excuse. 
+- Make-up exams are not given. ***If I see fit***, then I will replace a missed exam with your final exam test grade. If you do miss an exam without prior approval, a letter from the dean of students will be needed as an excuse. 
 
-- A number of programming assignments will be made to code and execute. Microsoft Visual Studio 2013 or 2015 is recommended, although depending on class opinion, we may use QT4 for some assignments. 
+- A number of programming assignments will be made to code and execute. This course requires an ascii editor, a terminal emulator, and a ftp client. The labs provide Notepad++, Putty, and Filezilla respecively.
 
 - Programs containing syntax errors are unacceptable and will be returned without grading (your programs must work). All submitted programs need to be submitted via Github. 
 
-
 - Periodically homework assignments will be taken up and graded. It is the student's responsibility to keep up with assignments and to ask questions over the assigned work, even if absent. All homework assignments are due at the specified time that may or may not be in conjunction with a class day. All assignments / homeworks will be uploaded via Github.
+
+- All work (unless specified) will be done by yourself without help or collaboration with other students. Any resources used from the web should be cited in your comments of your program or paper. Failure to do so could range in dismissal from the course to a 0 on the assignment.  
 
 
 ## Important Links
