@@ -4,7 +4,7 @@
 - Use notepad++ on your lab computer, then print when done.
 - Using a Python, C++, or Java (or even pseudo code) answer the following questions.
 - All example values are only to help understand the problem, your solutions should work with more than just the example data given.
-- If you cannot complete this test with an 80% or better, you will need to take another course.
+- If you cannot complete this test with an 80% or better, you should think strongly about staying in this class.
 
 --
 
