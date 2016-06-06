@@ -2,8 +2,8 @@
 Introduction to 2D gaming using a javascript framework
 
 - Companion Website:
-    - Signup Link: https://piazza.com/mwsu/spring2016/cmps2143
-    - Class Link: https://piazza.com/mwsu/spring2016/cmps2143/home
+    - Signup Link: https://piazza.com/mwsu/summer2016/cmps4443cmps5353
+    - Class Link: https://piazza.com/mwsu/summer2016/cmps4443cmps5353/home
 - Days: TR 1100am 1220pm 
 - Location: BO 304 
 - Final Exam: Friday July 8th, 2:30 - 4:30 p.m.
