@@ -1,5 +1,5 @@
 ### Assignment 3 - Hello Phaser
-#### Due: Wednesday June 8th by Class time. 
+#### Due: Teusday June 7th by Class time. 
 
 -----
 
