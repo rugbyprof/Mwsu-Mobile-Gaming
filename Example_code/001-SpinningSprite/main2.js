@@ -5,9 +5,9 @@ var mainState = {
     },
 
     create: function() { 
-        this.width = this.game.cache.getImage("logo").width;
-        this.height = this.game.cache.getImage("logo").height;
-        this.sprite = this.game.add.sprite(game.world.centerX - this.width / 2, game.world.centerY - this.height / 2, 'logo');
+        this.width = game.cache.getImage("logo").width;
+        this.height = game.cache.getImage("logo").height;
+        this.sprite = game.add.sprite(game.world.centerX - this.width / 2, game.world.centerY - this.height / 2, 'logo');
         this.sprite.anchor.setTo(0.5, 0.5);
     },
 
