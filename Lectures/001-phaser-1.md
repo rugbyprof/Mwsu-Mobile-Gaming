@@ -18,7 +18,7 @@
     </body>
 </html>
 ```
-#### Phaser Template
+#### Phaser Template 1
 
 ```js
 // We create our only state
@@ -36,6 +36,10 @@ var mainState = {
 	update: function() {
 		// This function is called 60 times per second
 		// It contains the game's logic
+	},
+	render: function() {
+		// The render method is called AFTER the game renderer and plugins have rendered, 
+		// so you're able to do any final post-processing style effects here
 	}
 };
 // We initialize Phaser
@@ -44,6 +48,37 @@ var game = new Phaser.Game(400, 300, Phaser.AUTO, 'gameDiv');
 game.state.add('main', mainState);
 game.state.start('main');
 ```
+#### Phaser Template 2
+
+```js
+
+// We initialize Phaser
+var game = new Phaser.Game(400, 300, Phaser.AUTO, 'gameDiv', { preload: preload, create: create, update: update, render: render });
+
+function preload() {
+	// This function will be executed at the beginning
+	// That's where we load the game's assets
+}
+
+function create() {
+	// This function is called after the 'preload' function
+	// Here we set up the game, display sprites, etc.
+}
+
+function update() {
+	// This function is called 60 times per second
+	// It contains the game's logic
+}
+
+function render() {
+	// The render method is called AFTER the game renderer and plugins have rendered, 
+	// so you're able to do any final post-processing style effects here
+}
+
+
+
+```
+
 
 #### main.js
 ```js
@@ -68,10 +103,22 @@ game.state.start('main');
 
 ## Breaking It Down
 
+### Phaser.Game
+
+```js
+var game = new Phaser.Game(400, 300, Phaser.AUTO, 'gameDiv');
+// 400 = game width
+// 300 = game height
+// Phaser.AUTO = picks wither Canvas or WebGL as the rendering platform based on needs
+// gameDiv = The html element in which to place the game
+```
 
 #### Width and Height of a Sprite (image)
 
 ```js
+//Init the game
+var game = new Phaser.Game(400, 300, Phaser.AUTO, 'gameDiv');
+
 //in the preload function
 game.load.image('logo', 'logo.png');
 
@@ -82,5 +129,24 @@ console.log(width);
 console.log(height);
 ```
 
+#### Size of the game world
+
+```js
+//Init the game
+var game = new Phaser.Game(400, 300, Phaser.AUTO, 'gameDiv');
+
+console.log(game.world.width)
+console.log(game.world.height)
+
+```
+
 #### Center of the game world
 
+```js
+//Init the game
+var game = new Phaser.Game(400, 300, Phaser.AUTO, 'gameDiv');
+
+console.log(game.world.centerX)
+console.log(game.world.centerY)
+
+```
