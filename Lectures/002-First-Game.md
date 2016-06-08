@@ -79,7 +79,7 @@ To center the player we can use??
 ### Gravity
 
 ```js
-// Tell Phaser that the player will use the Arcade physics engine
+// Tell Phaser that the player will use the Arcade physics engine in the create function
 game.physics.arcade.enable(this.player);
 // Add vertical gravity to the player
 this.player.body.gravity.y = 500;
@@ -144,6 +144,202 @@ sprite.tint = 0xff0000;
 sprite.kill();
 // Return false if the sprite was killed
 sprite.alive;
+```
+
+### Adding Walls
+
+Attempt 1:
+```js
+// Create the left wall
+var leftWall = game.add.sprite(0, 0, 'wallV');
+
+// Add Arcade physics to the wall (for collisions with the player)
+game.physics.arcade.enable(leftWall);
+
+// Set a property to make sure the wall won't move
+// We don't want to see it fall when the player touches it
+leftWall.body.immovable = true;
+
+// Do the same for the right wall
+var rightWall = game.add.sprite(480, 0, 'wallV');
+game.physics.arcade.enable(rightWall);
+rightWall.body.immovable = true;
+```
+
+Attempt 2:
+
+```js
+// Create a new group
+this.walls = game.add.group();
+
+// Add Arcade physics to the whole group
+this.walls.enableBody = true;
+
+// Create 2 walls in the group
+game.add.sprite(0, 0, 'wallV', 0, this.walls); // Left wall
+game.add.sprite(480, 0, 'wallV', 0, this.walls); // Right wall
+
+// Set all the walls to be immovable
+this.walls.setAll('body.immovable', true);
+```
+
+Final Attempt:
+```js
+createWorld: function() {
+    // Create our group with Arcade physics
+    this.walls = game.add.group();
+    this.walls.enableBody = true;
+    // Create the 10 walls in the group
+    game.add.sprite(0, 0, 'wallV', 0, this.walls); // Left
+    game.add.sprite(480, 0, 'wallV', 0, this.walls); // Right
+    game.add.sprite(0, 0, 'wallH', 0, this.walls); // Top left
+    game.add.sprite(300, 0, 'wallH', 0, this.walls); // Top right
+    game.add.sprite(0, 320, 'wallH', 0, this.walls); // Bottom left
+    game.add.sprite(300, 320, 'wallH', 0, this.walls); // Bottom right
+    game.add.sprite(-100, 160, 'wallH', 0, this.walls); // Middle left
+    game.add.sprite(400, 160, 'wallH', 0, this.walls); // Middle right
+    var middleTop = game.add.sprite(100, 80, 'wallH', 0, this.walls);
+    middleTop.scale.setTo(1.5, 1);
+    var middleBottom = game.add.sprite(100, 240, 'wallH', 0, this.walls);
+    middleBottom.scale.setTo(1.5, 1);
+    // Set all the walls to be immovable
+    this.walls.setAll('body.immovable', true);
+```
+
+Now call the function `this.createWorld();` in the `create` method.
+
+### Collisions
+
+```js
+// Tell Phaser that the player and the walls should collide
+game.physics.arcade.collide(this.player, this.walls);
+```
+
+### Make the Player Die
+
+```js
+playerDie: function() {
+    game.state.start('main');
+}
+
+// Check to see if the player leaves the world to kill them.
+
+if (!this.player.inWorld) {
+    this.playerDie();
+}
+```
+
+### Adding Coins
+
+Add the coin:
+```js
+game.load.image('coin', 'assets/coin.png');
+```
+
+Create the coin:
+```js
+// Display the coin
+this.coin = game.add.sprite(60, 140, 'coin');
+// Add Arcade physics to the coin
+game.physics.arcade.enable(this.coin);
+// Set the anchor point to its center
+this.coin.anchor.setTo(0.5, 0.5);
+```
+
+### Display the Score
+
+- `game.add.text(positionX, positionY, text, style)`
+    - positionX: position x of the text.
+    - positionY: position y of the text.
+    - text: text to display.
+    - style: style of the text.
+    
+```js
+// Display the score
+this.scoreLabel = game.add.text(30, 30, 'score: 0', { font: '18px Arial', fill: '#ffffff' });
+// Initialize the score variable
+this.score = 0;
+```
+
+### Keeping Score (Collisions) 
+
+- `game.physics.arcade.overlap(objectA, objectB, callback, process, context)`
+    - objectA: the first object to check.
+    - objectB: the second object to check.
+    - callback: the function that gets called when the 2 objects overlap.
+    - process: if this is set then callback will only be called if process returns true.
+    - context: the context in which to run the callback, most of the time it will be this.
+
+Function to "take" a coin:
+```js
+takeCoin: function(player, coin) {
+// Kill the coin to make it disappear from the game
+this.coin.kill();
+// Increase the score by 5
+this.score += 5;
+// Update the score label by using its 'text' property
+this.scoreLabel.text = 'score: ' + this.score;
+}
+```
+
+Add to the update function (notice the callback parameter):
+```js
+game.physics.arcade.overlap(this.player, this.coin, this.takeCoin, null, this);
+```
+### Moving the Coin
+
+**Attempt 1:**
+
+```js
+// Return a random integer between a and b
+var number = game.rnd.integerInRange(a, b);
+// Change the coin's position to x, y
+this.coin.reset(x, y);
+```
+So we could replace the this.coin.kill in the takeCoin function by something like this:
+
+```js
+// Get 2 random numbers
+var newX = game.rnd.integerInRange(0, game.width);
+var newY = game.rnd.integerInRange(0, game.height);
+// Set the new coin position
+this.coin.reset(newX, newY);
+```
+ Problems??
+ 
+ 
+**Attempt 2:**
+```js
+ updateCoinPosition: function() {
+    // Store all the possible coin positions in an array
+    var coinPosition = [
+        {x: 140, y: 60}, {x: 360, y: 60}, // Top row
+        {x: 60, y: 140}, {x: 440, y: 140}, // Middle row
+        {x: 130, y: 300}, {x: 370, y: 300} // Bottom row
+    ];
+    // Remove the current coin position from the array
+    // Otherwise the coin could appear at the same spot twice in a row
+    for (var i = 0; i < coinPosition.length; i++) {
+        if (coinPosition[i].x == this.coin.x) {
+            coinPosition.splice(i, 1);
+        }
+    }
+    // Randomly select a position from the array with 'game.rnd.pick'
+    var newPosition = game.rnd.pick(coinPosition);
+    // Set the new position of the coin
+    this.coin.reset(newPosition.x, newPosition.y);
+}
+```
+
+New TakeCoin function:
+```js
+takeCoin: function(player, coin) {
+// Update the score
+this.score += 5;
+this.scoreLabel.text = 'score: ' + this.score;
+// Change the coin position
+this.updateCoinPosition();
+}
 ```
 
 <sub>**Source**:Discover Phaser: Learn how to make great HTML5 games. Author: Thomas Palef </sub>
