@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /assets/physics</title>
+ </head>
+ <body>
+<h1>Index of /assets/physics</h1>
+<table><tr><th><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th><th><a href="?C=D;O=D">Description</a></th></tr><tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[DIR]"></td><td><a href="/assets/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="diamond.json">diamond.json</a></td><td align="right">09-Sep-2014 21:18  </td><td align="right">252 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="ninja-test-level.json">ninja-test-level.json</a></td><td align="right">09-Sep-2014 21:18  </td><td align="right">3.6K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="ninja-test-level.tmx">ninja-test-level.tmx</a></td><td align="right">09-Sep-2014 21:18  </td><td align="right">5.4K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/image2.gif" alt="[IMG]"></td><td><a href="ninja-tiles32.png">ninja-tiles32.png</a></td><td align="right">09-Sep-2014 21:18  </td><td align="right">5.9K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/image2.gif" alt="[IMG]"></td><td><a href="ninja-tiles64.png">ninja-tiles64.png</a></td><td align="right">09-Sep-2014 21:18  </td><td align="right"> 12K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/image2.gif" alt="[IMG]"></td><td><a href="ninja-tiles128.png">ninja-tiles128.png</a></td><td align="right">09-Sep-2014 21:18  </td><td align="right"> 31K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="sprites.json">sprites.json</a></td><td align="right">09-Sep-2014 21:18  </td><td align="right">5.1K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="sprites.pes">sprites.pes</a></td><td align="right">09-Sep-2014 21:18  </td><td align="right">3.5K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="thrust-level2.json">thrust-level2.json</a></td><td align="right">09-Sep-2014 21:18  </td><td align="right">1.5K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/image2.gif" alt="[IMG]"></td><td><a href="thrust-level2.png">thrust-level2.png</a></td><td align="right">09-Sep-2014 21:18  </td><td align="right">5.5K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="thrust.json">thrust.json</a></td><td align="right">09-Sep-2014 21:18  </td><td align="right">207 </td><td>&nbsp;</td></tr>
+<tr><th colspan="5"><hr></th></tr>
+</table>
+<address>Apache/2.2.22 (Ubuntu) Server at examples.phaser.io Port 80</address>
+</body></html>

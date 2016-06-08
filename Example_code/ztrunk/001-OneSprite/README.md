@@ -1,0 +1,1 @@
+This example adds 1 sprite to a fixed location.
