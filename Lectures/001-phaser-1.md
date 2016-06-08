@@ -112,23 +112,6 @@ var game = new Phaser.Game(400, 300, Phaser.AUTO, 'gameDiv');
 // Phaser.AUTO = picks wither Canvas or WebGL as the rendering platform based on needs
 // gameDiv = The html element in which to place the game
 ```
-
-#### Width and Height of a Sprite (image)
-
-```js
-//Init the game
-var game = new Phaser.Game(400, 300, Phaser.AUTO, 'gameDiv');
-
-//in the preload function
-game.load.image('logo', 'logo.png');
-
-//in the create function
-var width = this.game.cache.getImage("logo").width;
-var height = this.game.cache.getImage("logo").height;
-console.log(width);
-console.log(height);
-```
-
 #### Size of the game world
 
 ```js
@@ -150,3 +133,20 @@ console.log(game.world.centerX)
 console.log(game.world.centerY)
 
 ```
+
+#### Width and Height of a Sprite (image)
+
+```js
+//Init the game
+var game = new Phaser.Game(400, 300, Phaser.AUTO, 'gameDiv');
+
+//in the preload function
+game.load.image('logo', 'logo.png');
+
+//in the create function
+var width = this.game.cache.getImage("logo").width;
+var height = this.game.cache.getImage("logo").height;
+console.log(width);
+console.log(height);
+```
+
