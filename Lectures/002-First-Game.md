@@ -342,4 +342,4 @@ this.updateCoinPosition();
 }
 ```
 
-<sub>**Source**:Discover Phaser: Learn how to make great HTML5 games. Author: Thomas Palef </sub>
+<sub>**Source:** All content (including images) obtained from "[Discover Phaser](https://www.discoverphaser.com/)", Author:Thomas Palef</sub>
