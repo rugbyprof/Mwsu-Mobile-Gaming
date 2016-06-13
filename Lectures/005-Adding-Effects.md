@@ -76,7 +76,7 @@ sound.fadeOut(duration);
 
 The fadeIn and fadeOut functions are especially usefull when playing a background music.
 
-### Add Animations
+## Add Animations
 
 #### Load Player
 
@@ -152,7 +152,7 @@ movePlayer: function() {
 },
 ```
 
-### Adding Tweens
+## Adding Tweens
 
 - A "tween" is a change in an object over time.
 - For example:
@@ -278,6 +278,148 @@ tween.easing(Phaser.Easing.Sinusoidal.In);
 tween.easing(Phaser.Easing.Exponential.Out);
 ```
 
+## Adding Particles
+
+Examples:
+
+- Explosions
+- Rain
+- Dust
+
+![](http://f.cl.ly/items/1n022j2g160V1q1Y2o0G/Screen%20Shot%202016-06-13%20at%202.17.39%20PM.png)
+
+###  Load Particle
+
+***load.js*** (preload)
+```js
+game.load.image('pixel', 'assets/pixel.png');
+```
+
+### Create Emitter
+
+We need to use an `emitter` to create the particles:
+
+- `game.add.emitter(x, y, maxParticles)`
+    - ***x***: the x position of the emitter.
+    - ***y***: the y position of the emitter.
+    - ***maxParticles***: the total number of particles in the emitter.
+
+- Setting the x and y speed like below means that the particles will go in every possible direction. 
+- For example, if we did `this.emitter.setXSpeed(0, 150)`, we wouldn’t see any particles going to the left.
+
+***play.js*** (create)
+```js
+// Create the emitter with 15 particles. We don't need to set the x y
+// Since we don't know where to do the explosion yet
+this.emitter = game.add.emitter(0, 0, 15);
+
+// Set the 'pixel' image for the particles
+this.emitter.makeParticles('pixel');
+
+// Set the x and y speed of the particles between -150 and 150
+// Speed will be randomly picked between -150 and 150 for each particle
+this.emitter.setYSpeed(-150, 150);
+this.emitter.setXSpeed(-150, 150);
+
+// Scale the particles from 2 time their size to 0 in 800ms
+// Parameters are: startX, endX, startY, endY, duration
+this.emitter.setScale(2, 0, 2, 0, 800);
+
+// Use no gravity
+this.emitter.gravity = 0;
+```
+### Start Emitter
+
+- `start(explode, lifespan, frequency, quantity)`
+    - ***explode***: whether the particles should all burst out at once (true) or at a given frequency (false).
+    - ***lifespan***: how long each particle lives once emitted in ms.
+    - ***frequency***: if explode is set to false, define the delay between each particles in ms.
+    - ***quantity***: how many particles to launch.
+
+(playerDie)
+```js
+playerDie: function() {
+    // Set the position of the emitter on top of the player
+    this.emitter.x = this.player.x;
+    this.emitter.y = this.player.y;
+    // Start the emitter by exploding 15 particles that will live 800ms
+    this.emitter.start(true, 800, null, 15);
+    // Play the sound and go to the menu state
+    this.deadSound.play();
+    game.state.start('menu');
+},
+```
+
+### Add Delay
+
+***play.js*** (new function)
+```js
+startMenu: function() {
+    game.state.start('menu');
+},
+```
+
+(playerDie)
+```js
+playerDie: function() {
+    // Kill the player to make it disappear from the screen
+    this.player.kill();
+    // Start the sound and the particles
+    this.deadSound.play();
+    this.emitter.x = this.player.x;
+    this.emitter.y = this.player.y;
+    this.emitter.start(true, 800, null, 15);
+    
+    // Call the 'startMenu' function in 1000ms
+    game.time.events.add(1000, this.startMenu, this);
+},
+```
+
+>The game.time.events.add function works like game.time.events.loop that we used to create the enemies, except that it will call the function only once.
+
+### Fix Sound
+
+Falling in the Hole????
+
+(update function)
+```js
+// quiz
+```
+
+### More Particles
+
+```js
+// Emit different particles
+emitter.makeParticles(['image1', 'image2', 'image3']);
+// Set min and max rotation velocity
+emitter.setRotation(min, max);
+// Change the alpha value over time
+emitter.setAlpha(startAlpha, endAlpha, duration);
+// Change the size of the emitter
+emitter.width = 69;
+emitter.height = 42;
+```
+
+## Better Camera
+
+### Flash Effect
+
+![](http://f.cl.ly/items/0d0i2S3K0H3o1p0l1f19/Screen%20Shot%202016-06-13%20at%202.30.02%20PM.png)
+
+(playerDie)
+```js
+// Flash the color white for 300ms
+game.camera.flash(0xffffff, 300);
+```
+
+###Shake Effect
+
+```js
+// Shake for 300ms with an intensity of 0.02
+game.camera.shake(0.02, 300);
+```
+
+## Improvements
 
 ![](http://f.cl.ly/items/2q471o1y2x2l3F0X0Y39/Screen%20Shot%202016-06-13%20at%209.37.44%20AM.png)
 
