@@ -15,13 +15,13 @@
 - The body of your email will contain your name, a link to the assignment on your server, and a link to your github repo.
 - Example email below:
 
-Subject: 2D Program 2
-
-Here are the links for my assignment:
-John Smith
-Roster #11
-http://120.34.43.111/Mwsu-2D-Gaming-Smith/Program-2
-http://github.com/smittyville/Mwsu-2D-Gaming-Smith/
+>Subject: 2D Program 2
+>
+>Name John Smith<br>
+Here are the links for my assignment:<br>
+Roster #11<br>
+http://120.34.43.111/Mwsu-2D-Gaming-Smith/Program-2<br>
+http://github.com/smittyville/Mwsu-2D-Gaming-Smith/<br>
 
 ### Actual Assignment
 
