@@ -29,14 +29,14 @@ game.load.audio('coin', ['assets/coin.ogg', 'assets/coin.mp3']);
 // Sound when the player dies
 game.load.audio('dead', ['assets/dead.ogg', 'assets/dead.mp3']);
 ```
-***`play.js`***
+***`play.js`*** (preLoad)
 ```js
 this.jumpSound = game.add.audio('jump');
 this.coinSound = game.add.audio('coin');
 this.deadSound = game.add.audio('dead');
 ```
 
-***`play.js`***
+***`play.js`***(movePlayer)(takeCoin)(playerDie)
 ```js
 // Add this inside the 'movePlayer' function, in the 'if(player jumps)'
 this.jumpSound.play();
@@ -50,14 +50,17 @@ this.deadSound.play();
 
 Watch out for large music files!
 
+***Read comments to find snippet locations***
 ```js
 // Load the music in 2 different formats in the load.js file
 game.load.audio('music', ['assets/music.ogg', 'assets/music.mp3']);
+
 // Add and start the music in the 'create' function of the play.js file
 // Because we want to play the music when the play state starts
 this.music = game.add.audio('music'); // Add the music
 this.music.loop = true; // Make it loop
 this.music.play(); // Start the music
+
 // And don't forget to stop the music in the 'playerDie' function
 // Otherwise the music would keep playing
 this.music.stop();
@@ -216,10 +219,8 @@ tween.start();
 Combine this:
 
 ***menu.js*** (create)
-
 ```js
-game.add.tween(startLabel).to({angle: -2}, 500).to({angle: 2}, 1000)
-.to({angle: 0}, 500).loop().start();
+game.add.tween(startLabel).to({angle: -2}, 500).to({angle: 2}, 1000).to({angle: 0}, 500).loop().start();
 ```
 
 ### Tween 3 - Scale Coin
@@ -228,7 +229,7 @@ game.add.tween(startLabel).to({angle: -2}, 500).to({angle: 2}, 1000)
 - The following will scale the coin when it appears.
 - Scaling x and y at the same time is doable:
 
-(takeCoin)
+***play.js***(takeCoin)
 ```js
 // Scale the coin to 0 to make it invisible
 this.coin.scale.setTo(0, 0);
@@ -242,7 +243,7 @@ game.add.tween(this.coin.scale).to({x: 1, y: 1}, 300).start();
 - To do so we add this in the takeCoin function
 - The `yoyo` function is the opposite of what we did to the coin
 
-(takeCoin)
+***play.js***(takeCoin)
 ```js
 game.add.tween(this.player.scale).to({x: 1.3, y: 1.3}, 100).yoyo(true).start();
 ```
@@ -336,7 +337,7 @@ this.emitter.gravity = 0;
     - ***frequency***: if explode is set to false, define the delay between each particles in ms.
     - ***quantity***: how many particles to launch.
 
-(playerDie)
+***play.js***(playerDie)
 ```js
 playerDie: function() {
     // Set the position of the emitter on top of the player
@@ -377,17 +378,13 @@ playerDie: function() {
 
 >The game.time.events.add function works like game.time.events.loop that we used to create the enemies, except that it will call the function only once.
 
-### Fix Sound
+### Fix Sound and Animations
 
-Falling in the Hole????
-
-(update function)
-```js
-// quiz
-```
+At this point, if your player falls in the hole, there should be a problem (meaning it calls shake and/or flash and/or plays sound too many times). This will be part of your assignment.
 
 ### More Particles
 
+Extra Stuff:
 ```js
 // Emit different particles
 emitter.makeParticles(['image1', 'image2', 'image3']);
