@@ -90,11 +90,13 @@ frame is numbered from left to right:
 Think of a sprite as a big image in which the whole image gets moved so the "frame" we want to see
 is highlighted in the viewing window:
 
-![alt][2]
-![alt][3]
-![alt][4]
-![alt][5]
-![alt][6]
+|Frame #|      |
+|-------|------|
+|0|![alt][2]|
+|1|![alt][3]|
+|2|![alt][4]|
+|3|![alt][5]|
+|4|![alt][6]|
 
 ### Movements:
 |  Movement |   Frames  |    Sprite   |  Animation |
