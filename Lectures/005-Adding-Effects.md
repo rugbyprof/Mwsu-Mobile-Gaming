@@ -91,9 +91,9 @@ http://f.cl.ly/items/240g3f0I0G3W1x2j2k1m/sprite_frames_numbered.png
 ![](http://f.cl.ly/items/2D0K1J2E1S2J3x3U4329/player_0.png)
 
 ### Frames 1-2:
-|  Movement |   Frames  |        |                                       |
-|-----------|-----------------------------------|        |                                       |
-| Stop      |   0       |       ![](http://f.cl.ly/items/1v0V0j1p3n082n451P1m/player_move_right.gif)
+|  Movement |   Frames  |    Sprite   |  Animation |
+|-----------|-----------|--------------|-----------|      
+| Stop      |   0       |    ![alt][2]  |   ![alt][7] |
 
 ### Frames 1-2:
 
@@ -114,3 +114,11 @@ game.load.spritesheet('player', 'assets/player2.png', 20, 20);
 ![](http://f.cl.ly/items/383q283K0m3s0t3W0f3W/Screen%20Shot%202016-06-13%20at%209.32.36%20AM.png)
 
 <sub>**Source:** All content (including images) obtained from "[Discover Phaser](https://www.discoverphaser.com/)", Author:Thomas Palef</sub>
+
+[1]: http://f.cl.ly/items/3R1F2I1q2h0y3Q1I0t3M/sprite_frames.png "frames"
+[2]: http://f.cl.ly/items/0D3s0V0o1K193P1W0i1H/sprite_frame_0.png  "frame 0"
+[3]: http://f.cl.ly/items/0V2M0B3A2j3m2p1w1x0o/sprite_frame_1.png  "frame 1"
+[4]: http://f.cl.ly/items/1N2y0Y2N3o012Y0b1L1A/sprite_frame_2.png  "frame 2"
+[5]: http://f.cl.ly/items/3n1d3H0P3K062K2U2v3d/sprite_frame_3.png "frame 3"
+[6]: http://f.cl.ly/items/0p1u3O3c1r0d3Q400Y1H/sprite_frame_4.png "Frame 4"
+[7]: http://f.cl.ly/items/2D0K1J2E1S2J3x3U4329/player_0.png "player 0"
