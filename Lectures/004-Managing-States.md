@@ -207,6 +207,77 @@ Notice the syntax? Typical object huh? Easy to add other `key:value` pairs in th
 - `game.input.keyboard.createCursorKeys` is what we saw in the previous chapter.
 - `game.input.keyboard.addKey` is a more lightweight method acheiving needed behavior.
 
+### play.js
 
+- The state is now called `playState` instead of `mainState`.
+- The preload function is no longer needed since we already load all our assets in the `load.js` file.
+- The code for the background color, Arcade physics, and roundPixels are now in the `boot.js` file.
+- Instead of using the `this.score variable`, we now use `game.global.score`.
+- When the player dies we want to go back to the menu state.
+- Delete the Phaser initalization at the end of the file.
+
+```js
+// New name for the state
+var playState = {
+    // Removed the preload function
+    create: function() {
+        // Removed background color, physics system, and roundPixels
+        // Then everything is the same, except at the end...
+        // replace 'var score = 0' by this
+        game.global.score = 0;
+    },
+    update: function() {
+        // No changes
+    },
+    movePlayer: function() {
+        // No changes
+    },
+    takeCoin: function(player, coin) {
+        // Use the new score variable
+        game.global.score += 5;
+        // Use the new score variable
+        this.scoreLabel.text = 'score: ' + game.global.score;
+        // Then no changes
+    },
+    updateCoinPosition: function() {
+        // No changes
+    },
+    addEnemy: function() {
+        // No changes
+    },
+    createWorld: function() {
+        // No changes
+    },
+    playerDie: function() {
+        // When the player dies, we go to the menu
+        game.state.start('menu');
+    },
+};
+// Delete all Phaser initialization code
+```
+
+### game.js
+
+```js
+// Initialize Phaser
+var game = new Phaser.Game(500, 340, Phaser.AUTO, 'gameDiv');
+// Define our global variable
+game.global = {
+    score: 0
+};
+// Add all the states
+game.state.add('boot', bootState);
+game.state.add('load', loadState);
+game.state.add('menu', menuState);
+game.state.add('play', playState);
+// Start the 'boot' state
+game.state.start('boot');
+```
+
+1. First the boot state is called to load one image and set some settings.
+2. Then the load state is displayed to load all the game’s assets.
+3. After that the menu is shown.
+4. When the user presses the up arrow key we start the play state.
+5. And when the user dies we go back to the menu.
 
 <sub>**Source:** All content (including images) obtained from "[Discover Phaser](https://www.discoverphaser.com/)", Author:Thomas Palef</sub>
