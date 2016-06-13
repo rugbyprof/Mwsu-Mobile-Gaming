@@ -4,18 +4,27 @@
 
 ### Organization
 
-Issues:
+**Issues**:
 
-- We need to start playing as soon as the game loads.
+Some issues with our current configuration
+
+- Game play starts playing as soon as the game loads.
 - Each time the game restarts all assets are re-loaded.
 - We don’t have any menu to display the game’s name, controls, or score.
 
+We can alleviate these problems by organizing our game into **states**.
+
 ### What is a State
 
-- A part of the game
+>In **computer science** and **automata theory**, the **state** of a digital logic circuit or computer program is a technical term for all the stored information, at a given instant in time, to which the circuit or program has access.
+
+For our needs, a state will be a logical "section" or logical "block" that is somewhat independant of the other sections sharing only a necessary set of variables. 
+
+So a **state** is:
+- A section of the game
 - A scene
 
-Scenes only share:
+And **states** share:
 - preloaded assets
 - global variables
 
@@ -136,8 +145,68 @@ var loadState = {
 };
 ```
 
-
+## menu.js
 
 ![](http://f.cl.ly/items/2T0h1F3s0M203P1T2e2s/Screen%20Shot%202016-06-13%20at%209.29.49%20AM.png)
+
+```js
+var menuState = {
+    create: function() {
+        // Add a background image
+        game.add.image(0, 0, 'background');
+        // Display the name of the game
+        var nameLabel = game.add.text(game.width/2, 80, 'Super Coin Box', { font: '50px Arial', fill: '#ffffff' });
+        nameLabel.anchor.setTo(0.5, 0.5);
+        // Show the score at the center of the screen
+        var scoreLabel = game.add.text(game.width/2, game.height/2,
+            'score: ' + game.global.score,
+            { font: '25px Arial', fill: '#ffffff' });
+        scoreLabel.anchor.setTo(0.5, 0.5);
+        // Explain how to start the game
+        var startLabel = game.add.text(game.width/2, game.height-80,
+            'press the up arrow key to start',
+            { font: '25px Arial', fill: '#ffffff' });
+        startLabel.anchor.setTo(0.5, 0.5);
+        // Create a new Phaser keyboard variable: the up arrow key
+        // When pressed, call the 'start' function once
+        var upKey = game.input.keyboard.addKey(Phaser.Keyboard.UP);
+        upKey.onDown.add(this.start, this);
+    },
+    start: function() {
+        // Start the actual game
+        game.state.start('play');
+    },
+};
+```
+
+#### Background
+- For the background image we used `game.add.image` instead of `game.add.sprite`. 
+- An image is like a lightweight sprite that doesn’t need physics or animations. It’s perfect for logos, backgrounds, etc.
+
+#### Z-index
+- A `Z-index` is the "stack" order of objects
+- The lower the z-index the more "on the bottom" an item will be. 
+- The earlier an object is loaded or created, the smaller it's z-index is.
+- That's why the background is loaded before labels, so it will have a lower z-index.
+
+#### Score
+- Score is an example of a needed global var to be shared between the game and the menu.
+- `game.global.score` is used to store and display the score. 
+- This variable will be initialized in the `game.js` file like so:
+
+```js
+game.global = {
+    score: 0
+};
+```
+
+Notice the syntax? Typical object huh? Easy to add other `key:value` pairs in there.
+
+#### Key
+- Pauses game until the up arrow key is pressed. 
+- `game.input.keyboard.createCursorKeys` is what we saw in the previous chapter.
+- `game.input.keyboard.addKey` is a more lightweight method acheiving needed behavior.
+
+
 
 <sub>**Source:** All content (including images) obtained from "[Discover Phaser](https://www.discoverphaser.com/)", Author:Thomas Palef</sub>
