@@ -112,6 +112,46 @@ We can replace `game.load.image('player', 'assets/player.png')` by this in the `
 game.load.spritesheet('player', 'assets/player2.png', 20, 20);
 ```
 
+### Add Animations
+
+Adding a sprite is like adding an image, but we need to give more information:
+
+- `animations.add(name, frames, frameRate, loop)`
+    - **name**: name of the animation.
+    - **frames**: an array with the frames to add in the right order.
+    - **frameRate**: the speed at which the animation should play, in frames per second.
+    - **loop**: if set to true the animation will loop indefinitely.
+
+**play.js** (create)
+```js
+// Create the 'right' animation by looping the frames 1 and 2
+this.player.animations.add('right', [1, 2], 8, true);
+// Create the 'left' animation by looping the frames 3 and 4
+this.player.animations.add('left', [3, 4], 8, true);
+```
+
+Play Animations
+
+**play.js** (movePlayer)
+```js
+movePlayer: function() {
+    if (this.cursor.left.isDown) {
+        this.player.body.velocity.x = -200;
+        this.player.animations.play('left'); // Left animation
+    }
+    else if (this.cursor.right.isDown) {
+        this.player.body.velocity.x = 200;
+        this.player.animations.play('right'); // Right animation
+    }
+    else {
+        this.player.body.velocity.x = 0;
+        this.player.animations.stop(); // Stop animations
+        this.player.frame = 0; // Change frame (stand still)
+    }
+    // Then no changes to the jump code
+},
+```
+
 ![](http://f.cl.ly/items/0R0A1A1J3s151y2G2n0u/Screen%20Shot%202016-06-13%20at%209.30.22%20AM.png)
 
 ![](http://f.cl.ly/items/2q471o1y2x2l3F0X0Y39/Screen%20Shot%202016-06-13%20at%209.37.44%20AM.png)
