@@ -51,11 +51,55 @@ var scoreLabel = game.add.text(game.width/2, game.height/2, text, { font: '25px 
 
 ### Mute Button
 
-
-
-
 ![](http://f.cl.ly/items/1W2j052U3B3z1G2R1D1u/Screen%20Shot%202016-06-13%20at%209.31.43%20AM.png)
 
+We need a button that we can press to mute the game. Since the button will have 2 different images (mute and unmute).
+
+***`load.js`***
+```js
+game.load.spritesheet('mute', 'assets/muteButton.png', 28, 22);
+```
+
+Remember that the last 2 parameters are the width and height of each individual image in the spritesheet.
+
 ![](http://f.cl.ly/items/383q283K0m3s0t3W0f3W/Screen%20Shot%202016-06-13%20at%209.32.36%20AM.png)
+
+You can see that the sprite has 2 frames:
+- Frame 0 (top) where the speaker shows some sound. It will be displayed when the game emits sound.
+- And frame 1 (bottom) where the speaker shows no sound. It will be displayed when the game is muted.
+
+### Add Button
+
+We can show the button in the top left corner of the menu with `game.add.button`.
+- `game.add.button(x, y, name, callback, context)`
+    - ***x***: position x of the button.
+    - ***y***: position y of the butto.
+    - ***name***: the name of the image to display.
+    - ***callback***: the function called when the button is clicked.
+    - ***context***: the context in which the callback will be called, usually this.
+
+***`menu.js`*** (create)
+```js
+// Add the button that calls the 'toggleSound' function when pressed
+this.muteButton = game.add.button(20, 20, 'mute', this.toggleSound,this);
+```
+
+***`menus.js`*** (new function)
+```js
+// Function called when the 'muteButton' is pressed
+toggleSound: function() {
+    // Switch the variable from true to false, or false to true
+    // When 'game.sound.mute = true', Phaser will mute the game
+    game.sound.mute = !game.sound.mute;
+    // Change the frame of the button
+    this.muteButton.frame = game.sound.mute ? 1 : 0;
+},
+```
+If you die while the sound is muted, then we get our "states" out of whack. So we apply the following after we create the button:
+
+```js
+// If the game is already muted, display the speaker with no sound
+this.muteButton.frame = game.sound.mute ? 1 : 0;
+```
 
 <sub>**Source:** All content (including images) obtained from "[Discover Phaser](https://www.discoverphaser.com/)", Author:Thomas Palef</sub>
