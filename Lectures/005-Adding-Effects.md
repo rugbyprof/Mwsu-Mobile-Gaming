@@ -418,15 +418,6 @@ game.camera.flash(0xffffff, 300);
 // Shake for 300ms with an intensity of 0.02
 game.camera.shake(0.02, 300);
 ```
-
-## Improvements
-
-![](http://f.cl.ly/items/2q471o1y2x2l3F0X0Y39/Screen%20Shot%202016-06-13%20at%209.37.44%20AM.png)
-
-![](http://f.cl.ly/items/1W2j052U3B3z1G2R1D1u/Screen%20Shot%202016-06-13%20at%209.31.43%20AM.png)
-
-![](http://f.cl.ly/items/383q283K0m3s0t3W0f3W/Screen%20Shot%202016-06-13%20at%209.32.36%20AM.png)
-
 <sub>**Source:** All content (including images) obtained from "[Discover Phaser](https://www.discoverphaser.com/)", Author:Thomas Palef</sub>
 
 [1]: http://f.cl.ly/items/3R1F2I1q2h0y3Q1I0t3M/sprite_frames.png "frames"
