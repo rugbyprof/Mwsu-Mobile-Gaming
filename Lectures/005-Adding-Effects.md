@@ -36,7 +36,7 @@ this.coinSound = game.add.audio('coin');
 this.deadSound = game.add.audio('dead');
 ```
 
-***`play.js`***(movePlayer)(takeCoin)(playerDie)
+***`play.js`*** (movePlayer)(takeCoin)(playerDie)
 ```js
 // Add this inside the 'movePlayer' function, in the 'if(player jumps)'
 this.jumpSound.play();
@@ -229,7 +229,7 @@ game.add.tween(startLabel).to({angle: -2}, 500).to({angle: 2}, 1000).to({angle: 
 - The following will scale the coin when it appears.
 - Scaling x and y at the same time is doable:
 
-***play.js***(takeCoin)
+***play.js*** (takeCoin)
 ```js
 // Scale the coin to 0 to make it invisible
 this.coin.scale.setTo(0, 0);
@@ -243,7 +243,7 @@ game.add.tween(this.coin.scale).to({x: 1, y: 1}, 300).start();
 - To do so we add this in the takeCoin function
 - The `yoyo` function is the opposite of what we did to the coin
 
-***play.js***(takeCoin)
+***play.js*** (takeCoin)
 ```js
 game.add.tween(this.player.scale).to({x: 1.3, y: 1.3}, 100).yoyo(true).start();
 ```
@@ -337,7 +337,7 @@ this.emitter.gravity = 0;
     - ***frequency***: if explode is set to false, define the delay between each particles in ms.
     - ***quantity***: how many particles to launch.
 
-***play.js***(playerDie)
+***play.js*** (playerDie)
 ```js
 playerDie: function() {
     // Set the position of the emitter on top of the player
@@ -360,7 +360,7 @@ startMenu: function() {
 },
 ```
 
-(playerDie)
+***game.js*** (playerDie)
 ```js
 playerDie: function() {
     // Kill the player to make it disappear from the screen
@@ -403,7 +403,7 @@ emitter.height = 42;
 
 ![](http://f.cl.ly/items/0d0i2S3K0H3o1p0l1f19/Screen%20Shot%202016-06-13%20at%202.30.02%20PM.png)
 
-(playerDie)
+***game.js*** (playerDie)
 ```js
 // Flash the color white for 300ms
 game.camera.flash(0xffffff, 300);
