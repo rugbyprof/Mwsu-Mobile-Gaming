@@ -130,7 +130,7 @@ this.player.animations.add('right', [1, 2], 8, true);
 this.player.animations.add('left', [3, 4], 8, true);
 ```
 
-Play Animations
+### Play Animations
 
 **play.js** (movePlayer)
 ```js
@@ -152,7 +152,132 @@ movePlayer: function() {
 },
 ```
 
+### Adding Tweens
+
+- A "tween" is a change in an object over time.
+- For example:
+    - moving a sprite from A to B in x seconds. 
+    - rotate a label indefinitely.
+    - scale down a lable smoothly.
+    - etc.
+
 ![](http://f.cl.ly/items/0R0A1A1J3s151y2G2n0u/Screen%20Shot%202016-06-13%20at%209.30.22%20AM.png)
+
+### Tween 1 - Move Label
+
+***menu.js***
+```js
+
+// Changed the y position to -50 so we don't see the label
+var nameLabel = game.add.text(game.width/2, -50, 'Super Coin Box', { font: '50px Arial', fill: '#ffffff' });
+
+// Create a tween on the label
+var tween = game.add.tween(nameLabel);
+
+// Change the y position of the label to 80 in 1000 ms
+tween.to({y: 80}, 1000);
+
+// Start the tween
+tween.start();
+```
+- Moves lable from initial position (y=-50) to (y=80)
+- Could be combined like:
+```js
+game.add.tween(nameLabel).to({y: 80}, 1000).start(); 
+```
+
+- Default is straight line at constant speed
+- We can change this with an easing function:
+
+***menu.js*** (create)
+```
+game.add.tween(nameLabel).to({y: 80}, 1000).easing(Phaser.Easing.Bounce.Out).start();
+```
+
+### Tween 2 - Rotate Label
+
+Rotating the Label:
+
+```js
+// Create the tween
+var tween = game.add.tween(startLabel);
+// Rotate the label to -2 degrees in 500ms
+tween.to({angle: -2}, 500);
+// Then rotate the label to +2 degrees in 1000ms
+tween.to({angle: 2}, 1000);
+// And get back to our initial position in 500ms
+tween.to({angle: 0}, 500);
+// Loop indefinitely the tween
+tween.loop();
+// Start the tween
+tween.start();
+```
+
+Combine this:
+
+***menu.js*** (create)
+
+```js
+game.add.tween(startLabel).to({angle: -2}, 500).to({angle: 2}, 1000)
+.to({angle: 0}, 500).loop().start();
+```
+
+### Tween 3 - Scale Coin
+
+- Scale means to enlarge or shrink. 
+- The following will scale the coin when it appears.
+- Scaling x and y at the same time is doable:
+
+(takeCoin)
+```js
+// Scale the coin to 0 to make it invisible
+this.coin.scale.setTo(0, 0);
+// Grow the coin back to its original scale in 300ms
+game.add.tween(this.coin.scale).to({x: 1, y: 1}, 300).start();
+```
+
+### Tween 4 - Scale Player
+
+- Here’s a last example: each time we take a coin we want to see the player grow slightly for a short amount of time. 
+- To do so we add this in the takeCoin function
+- The `yoyo` function is the opposite of what we did to the coin
+
+(takeCoin)
+```js
+game.add.tween(this.player.scale).to({x: 1.3, y: 1.3}, 100).yoyo(true).start();
+```
+
+### More About Tweens
+
+- Anything that has a number can be tweened. 
+- So it can be: 
+    - x/y position, 
+    - angle, 
+    - x/y scale, 
+    - alpha, 
+    - volume (for a sound), etc.
+
+```js
+// Add a 100ms delay before the tween starts
+tween.delay(100);
+
+// Repeat the tween 5 times
+tween.repeat(5);
+
+// Stop the tween
+tween.stop();
+
+// Return true if the tween is currently playing
+tween.isRunning;
+
+// Will call 'callback' once the tween is finished
+tween.onComplete.add(callback, this);
+
+// And there are lots of other easing functions you can try, like:
+tween.easing(Phaser.Easing.Sinusoidal.In);
+tween.easing(Phaser.Easing.Exponential.Out);
+```
+
 
 ![](http://f.cl.ly/items/2q471o1y2x2l3F0X0Y39/Screen%20Shot%202016-06-13%20at%209.37.44%20AM.png)
 
