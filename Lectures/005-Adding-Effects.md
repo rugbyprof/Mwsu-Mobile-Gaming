@@ -168,7 +168,7 @@ movePlayer: function() {
 
 ### Tween 1 - Move Label
 
-***menu.js***
+***`menu.js`***
 ```js
 
 // Changed the y position to -50 so we don't see the label
@@ -192,7 +192,7 @@ game.add.tween(nameLabel).to({y: 80}, 1000).start();
 - Default is straight line at constant speed
 - We can change this with an easing function:
 
-***menu.js*** (create)
+***`menu.js`*** (create)
 ```
 game.add.tween(nameLabel).to({y: 80}, 1000).easing(Phaser.Easing.Bounce.Out).start();
 ```
@@ -218,7 +218,7 @@ tween.start();
 
 Combine this:
 
-***menu.js*** (create)
+***`menu.js`*** (create)
 ```js
 game.add.tween(startLabel).to({angle: -2}, 500).to({angle: 2}, 1000).to({angle: 0}, 500).loop().start();
 ```
@@ -229,7 +229,7 @@ game.add.tween(startLabel).to({angle: -2}, 500).to({angle: 2}, 1000).to({angle: 
 - The following will scale the coin when it appears.
 - Scaling x and y at the same time is doable:
 
-***play.js*** (takeCoin)
+***`play.js`*** (takeCoin)
 ```js
 // Scale the coin to 0 to make it invisible
 this.coin.scale.setTo(0, 0);
@@ -243,7 +243,7 @@ game.add.tween(this.coin.scale).to({x: 1, y: 1}, 300).start();
 - To do so we add this in the takeCoin function
 - The `yoyo` function is the opposite of what we did to the coin
 
-***play.js*** (takeCoin)
+***`play.js`*** (takeCoin)
 ```js
 game.add.tween(this.player.scale).to({x: 1.3, y: 1.3}, 100).yoyo(true).start();
 ```
@@ -291,7 +291,7 @@ Examples:
 
 ###  Load Particle
 
-***load.js*** (preload)
+***`load.js`*** (preload)
 ```js
 game.load.image('pixel', 'assets/pixel.png');
 ```
@@ -308,7 +308,7 @@ We need to use an `emitter` to create the particles:
 - Setting the x and y speed like below means that the particles will go in every possible direction. 
 - For example, if we did `this.emitter.setXSpeed(0, 150)`, we wouldn’t see any particles going to the left.
 
-***play.js*** (create)
+***`play.js`*** (create)
 ```js
 // Create the emitter with 15 particles. We don't need to set the x y
 // Since we don't know where to do the explosion yet
@@ -337,7 +337,7 @@ this.emitter.gravity = 0;
     - ***frequency***: if explode is set to false, define the delay between each particles in ms.
     - ***quantity***: how many particles to launch.
 
-***play.js*** (playerDie)
+***`play.js`*** (playerDie)
 ```js
 playerDie: function() {
     // Set the position of the emitter on top of the player
@@ -353,14 +353,14 @@ playerDie: function() {
 
 ### Add Delay
 
-***play.js*** (new function)
+***`play.js`*** (new function)
 ```js
 startMenu: function() {
     game.state.start('menu');
 },
 ```
 
-***game.js*** (playerDie)
+***`game.js`*** (playerDie)
 ```js
 playerDie: function() {
     // Kill the player to make it disappear from the screen
@@ -377,6 +377,15 @@ playerDie: function() {
 ```
 
 >The game.time.events.add function works like game.time.events.loop that we used to create the enemies, except that it will call the function only once.
+
+Here's the fix:
+***`game.js`*** (update.js)
+```js
+// If the player is dead, do nothing
+if (!this.player.alive) {
+    return;
+}
+```
 
 ### Fix Sound and Animations
 
@@ -403,7 +412,7 @@ emitter.height = 42;
 
 ![](http://f.cl.ly/items/0d0i2S3K0H3o1p0l1f19/Screen%20Shot%202016-06-13%20at%202.30.02%20PM.png)
 
-***game.js*** (playerDie)
+***`game.js`*** (playerDie)
 ```js
 // Flash the color white for 300ms
 game.camera.flash(0xffffff, 300);
