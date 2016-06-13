@@ -94,10 +94,9 @@ http://f.cl.ly/items/240g3f0I0G3W1x2j2k1m/sprite_frames_numbered.png
 |  Movement |   Frames  |    Sprite   |  Animation |
 |-----------|-----------|--------------|-----------|      
 | Stop      |   0       |    ![alt][2]  |   ![alt][7] |
+| Left      |   3-4      |    ![alt][11]  |   ![alt][10] |
+| Right      |   1-2      |    ![alt][12]  |   ![alt][9] |
 
-### Frames 1-2:
-
-Moving Left: ![](http://f.cl.ly/items/2Q1m3U1D0y0o302W1m3D/player_move_left.gif)
 
 We can replace `game.load.image('player', 'assets/player.png')` by this in the `load.js` file:
 
@@ -122,3 +121,7 @@ game.load.spritesheet('player', 'assets/player2.png', 20, 20);
 [5]: http://f.cl.ly/items/3n1d3H0P3K062K2U2v3d/sprite_frame_3.png "frame 3"
 [6]: http://f.cl.ly/items/0p1u3O3c1r0d3Q400Y1H/sprite_frame_4.png "Frame 4"
 [7]: http://f.cl.ly/items/2D0K1J2E1S2J3x3U4329/player_0.png "player 0"
+[9]: http://f.cl.ly/items/0C3B3c2d3r1w0z1M0B0X/sprite_move_right.gif "move player right"
+[10]:http://f.cl.ly/items/3M3Y3j1w1D1M24070v0U/sprite_move_left.gif "move player left"
+[11]:http://f.cl.ly/items/241C1r1k3k3n3U0B2c35/sprite_move_left_all.gif "move player left all"
+[12]:http://f.cl.ly/items/1Y0D0e3r123g1S2u353z/sprite_move_right_all.gif "move player right all"
