@@ -145,7 +145,7 @@ var loadState = {
 };
 ```
 
-## menu.js
+### menu.js
 
 ![](http://f.cl.ly/items/2T0h1F3s0M203P1T2e2s/Screen%20Shot%202016-06-13%20at%209.29.49%20AM.png)
 
@@ -194,6 +194,7 @@ var menuState = {
 - `game.global.score` is used to store and display the score. 
 - This variable will be initialized in the `game.js` file like so:
 
+***game.js***
 ```js
 game.global = {
     score: 0
@@ -279,5 +280,7 @@ game.state.start('boot');
 3. After that the menu is shown.
 4. When the user presses the up arrow key we start the play state.
 5. And when the user dies we go back to the menu.
+
+The code that this lecture results in can be found [here] (https://github.com/rugbyprof/Mwsu-Mobile-Gaming/blob/master/Example_code/managing_states_starter.zip). 
 
 <sub>**Source:** All content (including images) obtained from "[Discover Phaser](https://www.discoverphaser.com/)", Author:Thomas Palef</sub>
