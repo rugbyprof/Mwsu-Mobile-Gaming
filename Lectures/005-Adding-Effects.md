@@ -85,12 +85,18 @@ The fadeIn and fadeOut functions are especially usefull when playing a backgroun
 Above is a "spritesheet" in which each frame or subset of frames portrays a specific animation. Each 
 frame is numbered from left to right:
 
-http://f.cl.ly/items/240g3f0I0G3W1x2j2k1m/sprite_frames_numbered.png
+![alt][1]
 
-#### Frame 0:
-![](http://f.cl.ly/items/2D0K1J2E1S2J3x3U4329/player_0.png)
+Think of a sprite as a big image in which the whole image gets moved so the "frame" we want to see
+is highlighted in the viewing window:
 
-### Frames 1-2:
+![alt][2]
+![alt][3]
+![alt][4]
+![alt][5]
+![alt][6]
+
+### Movements:
 |  Movement |   Frames  |    Sprite   |  Animation |
 |-----------|-----------|--------------|-----------|      
 | Stop      |   0       |    ![alt][2]  |   ![alt][7] |
