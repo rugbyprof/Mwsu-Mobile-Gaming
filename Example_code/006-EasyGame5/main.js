@@ -160,8 +160,9 @@ var mainState = {
         // Set the new position of the coin
         this.coin.reset(newPosition.x, newPosition.y);
     },
-    playerDie: function() {
-        game.state.start('main');
+    playerDie: function(player,enemy) {
+        //game.state.start('main');
+        enemy.kill();
     },
     addEnemy: function() {
         // Get the first dead enemy of the group
