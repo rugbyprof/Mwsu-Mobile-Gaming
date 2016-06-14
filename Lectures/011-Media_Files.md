@@ -14,12 +14,16 @@ Our book recommended having at least two versions of a sound file when using the
 #### Original Image
 ![](http://104.131.149.230/Mwsu-Mobile-Gaming/Example_code/Program_1_Starter/assets/super-mushroom.png)
 
-- Replace the "white" color with "red"
+Now let's replace the "white" color with "red":
 ```bash
 convert super-mushroom.png -fuzz 25% -fill red -opaque white super-mushroom-1.png
 ```
 ![](http://104.131.149.230/Mwsu-Mobile-Gaming/Example_code/Program_1_Starter/assets/super-mushroom-1.png)
 
+Next, let's convert the "black" to pure alpha clear. This is a two step process.
+
+```bash
+# Make a mask (something to overlay the next image with)
 convert super-mushroom-2.png -colorspace HSB -separate image_mask.png
 
 (creates image_mask-0.png,image_mask-1.png,image_mask-2.png) 
