@@ -18,7 +18,15 @@ Now let's replace the "white" color with "red":
 ```bash
 convert super-mushroom.png -fuzz 40% -fill red -opaque white super-mushroom-1.png
 ```
-![](http://104.131.149.230/Mwsu-Mobile-Gaming/Example_code/Program_1_Starter/assets/super_mushroom/super-mushroom-1.png)
+![](http://104.131.149.230/Mwsu-Mobile-Gaming/Example_code/Program_1_Starter/assets/super_mushroom/super-mushroom-red.png)
+
+Ok, let's trim the extra stuff off the edges:
+
+```
+convert -trim super-mushroom-red.png super-mushroom-trimmed.png
+```
+
+![](http://104.131.149.230/Mwsu-Mobile-Gaming/Example_code/Program_1_Starter/assets/super_mushroom/super-mushroom-trimmed.png)
 
 Next, let's convert the "black" to pure alpha clear. This is a two step process.
 
@@ -34,6 +42,6 @@ convert super-mushroom-2.png -colorspace HSB -separate image_mask.png
 convert super-mushroom-2.png -alpha Off  image_mask-1.png -compose CopyOpacity -composite PNG32:super-mushroom-2-alpha.png
 # This takes the input file super-mushroom-2.png and puts the clear one in super-mushroom-2-alpha.png
 ```
-![](http://104.131.149.230/Mwsu-Mobile-Gaming/Example_code/Program_1_Starter/assets/super-mushroom-2-alpha.png)
+![](http://104.131.149.230/Mwsu-Mobile-Gaming/Example_code/Program_1_Starter/assets/super_mushroom/super-mushroom-1-alpha.png)
 
-convert -trim super-mushroom-1.png super-mushroom-2.png
+
