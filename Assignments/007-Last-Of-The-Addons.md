@@ -53,5 +53,5 @@ http://github.com/smittyville/Mwsu-2D-Gaming-Smith/<br>
 - Requirements:
     - Create a map using [Tiled](http://www.mapeditor.org/download.html) and incorporate it into your game. Your map MUST differ from the one in the assets folder so that I know you created it yourself.
     - Add all the changes from "[008-Mobile Friendly](https://github.com/rugbyprof/Mwsu-Mobile-Gaming/blob/master/Lectures/008-MobileFriendly.md)" to make your game mobile ready.
-    - The only required change from the walkthrough is that you will need to find your own arrow images and use those instead. Do not use the arrows provided in the assets folder.
+    - The only required change from the mobile friendly walkthrough is that you will need to find your own arrow images and use those instead. Do not use the arrows provided in the assets folder.
 
