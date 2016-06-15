@@ -102,4 +102,76 @@ If you die while the sound is muted, then we get our "states" out of whack. So w
 this.muteButton.frame = game.sound.mute ? 1 : 0;
 ```
 
+### Better Keyboard Inputs
+
+Force phaser to capture keys directly without use of the browser, which may mess up game play if the browser decides to "scroll" instead of sending the key on to phaser.
+
+***`play.js`*** (create)
+```js
+game.input.keyboard.addKeyCapture([Phaser.Keyboard.UP, Phaser.Keyboard.DOWN, Phaser.Keyboard.LEFT, Phaser.Keyboard.RIGHT]);
+```
+
+Some people like to use WASD instead of the arrow keys:
+
+***`play.js`*** (create)
+```js
+this.wasd = {
+    up: game.input.keyboard.addKey(Phaser.Keyboard.W),
+    left: game.input.keyboard.addKey(Phaser.Keyboard.A),
+    right: game.input.keyboard.addKey(Phaser.Keyboard.D)
+};
+```
+
+Now you need to edit your `movePlayer` function to act accordingly, meaning it will move up for both the "up arrow" key and the "w" key, etc..
+
+### Custom Fonts
+
+Adding this to your html file will import a custom font from google:
+
+```js
+<style type="text/css">
+    @import url(http://fonts.googleapis.com/css?family=Geo);
+    .hiddenText {
+            font-family: Geo;
+        visibility: hidden;
+        height: 0;
+    }
+</style>
+
+<p class="hiddenText"> . </p>
+```
+
+## Better Difficulty
+
+### Static Frequency
+
+***`play.js`***
+```js
+// Contains the time of the next enemy creation
+this.nextEnemy = 0;
+```
+
+***`play.js`*** (update)
+```js
+// If the 'nextEnemy' time has passed
+if (this.nextEnemy < game.time.now) {
+    // We add a new enemy
+    this.addEnemy();
+    // And we update 'nextEnemy' to have a new enemy in 2.2 seconds
+    this.nextEnemy = game.time.now + 2200;
+}
+```
+
+### Dynamic Frequency
+
+1. Start difficulty: how often should we create new enemies at the beginning of the game?
+2. End difficulty: how fast can we create enemies with the game still begin playable?
+3. Progression: when do we reach the maximum difficulty?
+
+How do we decide these values?
+
+
+
+
+
 <sub>**Source:** All content (including images) obtained from "[Discover Phaser](https://www.discoverphaser.com/)", Author:Thomas Palef</sub>
