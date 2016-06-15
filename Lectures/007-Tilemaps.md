@@ -81,10 +81,6 @@ Looking at the "Top Menu":
 
 ![](http://f.cl.ly/items/153S1K0v3c3j1x2Z1q1d/Screen%20Shot%202016-06-15%20at%2010.37.57%20AM.png)
 
-Here is an example of a different level configuration. 
-
-![](http://f.cl.ly/items/0S2L0F3T21352l3x312e/Screen%20Shot%202016-06-15%20at%2010.38.09%20AM.png)
-
 ## Use Tilemap
 
 ### Load
@@ -144,4 +140,8 @@ if ((this.cursor.up.isDown || this.wasd.up.isDown) && this.player.body.onFloor()
     this.player.body.velocity.y = -320;
 }
 ```
+
+Here is an example of a different level configuration. 
+
+![](http://f.cl.ly/items/0S2L0F3T21352l3x312e/Screen%20Shot%202016-06-15%20at%2010.38.09%20AM.png)
 <sub>**Source:** All content (including some images) obtained from "[Discover Phaser](https://www.discoverphaser.com/)", Author:Thomas Palef</sub>
