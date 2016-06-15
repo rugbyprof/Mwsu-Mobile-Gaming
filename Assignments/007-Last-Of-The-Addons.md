@@ -1,10 +1,13 @@
 # Not Done
 
 ## Note
+![](http://f.cl.ly/items/0Z2q103A2P1U3C0n0e2g/Screen%20Shot%202016-06-15%20at%206.17.00%20PM.png)
+
+Your github repository and your server contain copies of all your programs. When you turn in an assignment, it gets uploaded to your server and gets pushed to github. If you edit your code on github, the data/time saved is changed. Likewise, if you edit your code on the server the date/time edited changes as well (see above). I cannot distinguish between changes made via experimentation or changes made to fix a program that was not finished. So if you don't want your programs to be counted late, leave them alone.
 
 ![](http://f.cl.ly/items/1H3D2U451w02430a181Y/programs_in_github.png)
 
-Your github repository and your server contain copies of all your programs. When you turn in an assignment, it gets uploaded to your server and gets pushed to github.
+Look at the directory above, it has "Program-1" through "Program-N". Your github repo should have (the starting of) a similar structure. Once you finish `Program-x` leave it alone. If you want to experiment, do the following `cp -r Program-x Program-x-playground` or `cp -r Program-x someother-folder`. 
 
 
 
