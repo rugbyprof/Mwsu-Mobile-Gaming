@@ -7,8 +7,11 @@ Your github repository and your server contain copies of all your programs. When
 
 Look at the directory above, it has "Program-1" through "Program-N". Your github repo should have (the starting of) a similar structure. Once you finish `Program-x` leave it alone. If you want to experiment, do the following:
 
-- `cp -r Program-x Program-x-playground` or 
-- `cp -r Program-x someother-folder`. 
+- `cp -r Program-x someother-folder`
+
+Now you can edit `someother-folder` to your hearts desire.
+
+Another way to continue on your programs is to create a "branch" and work on that branch. Someone ask me in class tomorrow to show you how to do this.
 
 Now the assignment....
 
