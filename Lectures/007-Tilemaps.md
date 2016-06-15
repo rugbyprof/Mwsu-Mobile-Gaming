@@ -85,4 +85,63 @@ Here is an example of a different level configuration.
 
 ![](http://f.cl.ly/items/0S2L0F3T21352l3x312e/Screen%20Shot%202016-06-15%20at%2010.38.09%20AM.png)
 
+## Use Tilemap
+
+### Load
+
+***`load.js`*** 
+```js
+// Load the tileset information
+game.load.image('tileset', 'assets/tileset.png');
+game.load.tilemap('map', 'assets/map.json', null, Phaser.Tilemap.TILED_JSON);
+
+//REMOVE the wall assets
+game.load.image('wallV', 'assets/wallVertical.png');
+game.load.image('wallH', 'assets/wallHorizontal.png');
+```
+
+### Display 
+
+Replace the changeWorld function to use our new assets:
+
+***`play.js`*** (createWorld)
+```js
+createWorld: function() {
+    // Create the tilemap
+    this.map = game.add.tilemap('map');
+    
+    // Add the tileset to the map
+    this.map.addTilesetImage('tileset');
+    
+    // Create the layer by specifying the name of the Tiled layer
+    this.layer = this.map.createLayer('Tile Layer 1');
+
+    // Set the world size to match the size of the layer
+    this.layer.resizeWorld();
+    
+    // Enable collisions for the first tilset element (the blue wall)
+    this.map.setCollision(1);
+},
+```
+
+### Collisions
+
+The walls are gone! And we now are using a tilemap, so we need to amend our physics in the `update` function:
+
+***`play.js`*** (update)
+```js
+// Replaced 'this.walls' by 'this.layer'
+game.physics.arcade.collide(this.player, this.layer);
+game.physics.arcade.collide(this.enemies, this.layer);
+```
+We need to replace `body.touching.down` with `body.onFloor` because were using tiles and not "walls".
+
+### Jump
+***`play.js`*** (update)
+```js
+if ((this.cursor.up.isDown || this.wasd.up.isDown) && this.player.body.onFloor()) {
+    this.jumpSound.play();
+    this.player.body.velocity.y = -320;
+}
+```
 <sub>**Source:** All content (including some images) obtained from "[Discover Phaser](https://www.discoverphaser.com/)", Author:Thomas Palef</sub>
