@@ -5,7 +5,10 @@ Your github repository and your server contain copies of all your programs. When
 
 ![](http://f.cl.ly/items/1H3D2U451w02430a181Y/programs_in_github.png)
 
-Look at the directory above, it has "Program-1" through "Program-N". Your github repo should have (the starting of) a similar structure. Once you finish `Program-x` leave it alone. If you want to experiment, do the following `cp -r Program-x Program-x-playground` or `cp -r Program-x someother-folder`. 
+Look at the directory above, it has "Program-1" through "Program-N". Your github repo should have (the starting of) a similar structure. Once you finish `Program-x` leave it alone. If you want to experiment, do the following:
+
+- `cp -r Program-x Program-x-playground` or 
+- `cp -r Program-x someother-folder`. 
 
 Now the assignment....
 
