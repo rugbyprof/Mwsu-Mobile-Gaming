@@ -18,15 +18,70 @@ A tile looks like this:
 
 The left side is the walls, and the right side will be used for the holes of doom.
 
+## New Tile Map
+
+#### New Map 1:
+
+Open the tiled app and do the following:
+
+Looking at the "Top Menu":
+
+- File
+    - New
+        - Now fill out the dialog box like you see below:
+
+
 ![](http://f.cl.ly/items/0Q3H1G2w2x0a0o1L0s0j/Screen%20Shot%202016-06-15%20at%2010.37.22%20AM.png)
+
+#### New Map 2:
+
+Looking at the "Top Menu":
+
+- Map
+    - New Tileset
+        - Now fill out the dialog box like you see below.
+        - Browse and choose the "tileset.png" image in your assets folder of your program.
 
 ![](http://f.cl.ly/items/0f010i1J1c3u373F0m0n/Screen%20Shot%202016-06-15%20at%2010.37.29%20AM.png)
 
+
+#### New Map 3:
+
+Looking at the "Top Menu":
+
+- Map
+    - Map Properties
+        - Set the background color to blue (see below).
+        - Double click on the color box to see a color picker dialogue box.
+        
+![](http://f.cl.ly/items/3j2y3O1d1p2e3L3h2u0G/Screen%20Shot%202016-06-15%20at%2010.47.34%20AM.png)
+
+#### Your New Empty Map
+
+Notice your "tile" in the bottom right hand side (the black and red tile).
+
 ![](http://f.cl.ly/items/250L1U3V0U113f3K1o3V/Screen%20Shot%202016-06-15%20at%2010.37.39%20AM.png)
+
+## The Tilemap
+
+To create a new map we need the "stamp" tool and the "eraser" tool. See below:
 
 ![](http://f.cl.ly/items/1z3E263s0l3G083c0B03/Screen%20Shot%202016-06-15%20at%2010.37.49%20AM.png)
 
+To draw a map, pick the "stamp" tool from the menu bar, then choose either side of your tile (from the bottom right). The black side is for walls, the red side is for the holes. We could do this a bunch of different ways, but this is a simple example showing a tile with two frames.
+
+When your done with your level, save it:
+
+Looking at the "Top Menu":
+
+- File
+    - Save
+        - Select the `json` output format
+        - Call your file "map.json" 
+
 ![](http://f.cl.ly/items/153S1K0v3c3j1x2Z1q1d/Screen%20Shot%202016-06-15%20at%2010.37.57%20AM.png)
+
+Here is an example of a different level configuration. 
 
 ![](http://f.cl.ly/items/0S2L0F3T21352l3x312e/Screen%20Shot%202016-06-15%20at%2010.38.09%20AM.png)
 
