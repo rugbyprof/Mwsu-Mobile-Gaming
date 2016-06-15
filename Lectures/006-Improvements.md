@@ -49,7 +49,7 @@ var scoreLabel = game.add.text(game.width/2, game.height/2, text, { font: '25px 
 - The `\n` will add a line break. And since the label is now on 2 lines, we added align: `center` to center everything.
 - Just make sure to put this code after storing the best score, so that `localStorage.getItem` retrieves the newest best score.
 
-### Mute Button
+## Mute Button
 
 ![](http://f.cl.ly/items/1W2j052U3B3z1G2R1D1u/Screen%20Shot%202016-06-13%20at%209.31.43%20AM.png)
 
@@ -102,7 +102,7 @@ If you die while the sound is muted, then we get our "states" out of whack. So w
 this.muteButton.frame = game.sound.mute ? 1 : 0;
 ```
 
-### Better Keyboard Inputs
+## Better Keyboard Inputs
 
 Force phaser to capture keys directly without use of the browser, which may mess up game play if the browser decides to "scroll" instead of sending the key on to phaser.
 
