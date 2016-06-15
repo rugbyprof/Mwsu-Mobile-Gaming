@@ -1,5 +1,3 @@
-# Not Done
-
 ## Note
 ![](http://f.cl.ly/items/0Z2q103A2P1U3C0n0e2g/Screen%20Shot%202016-06-15%20at%206.17.00%20PM.png)
 
@@ -10,6 +8,8 @@ Your github repository and your server contain copies of all your programs. When
 Look at the directory above, it has "Program-1" through "Program-N". Your github repo should have (the starting of) a similar structure. Once you finish `Program-x` leave it alone. If you want to experiment, do the following `cp -r Program-x Program-x-playground` or `cp -r Program-x someother-folder`. 
 
 Now the assignment....
+
+---
 
 ## Last of the Addons
 - **Due**: June 16<sup>th</sup> by class time.
@@ -38,8 +38,14 @@ http://github.com/smittyville/Mwsu-2D-Gaming-Smith/<br>
 
 ### Actual Assignment
 
-- Add the additions from:
+- Starter code [here](https://github.com/rugbyprof/Mwsu-Mobile-Gaming/blob/master/Example_code/Program-3-Starter.zip) if you need it.
+
+- Add the additions from these two lectures / walkthroughs to either the starter code above, or your existing game. 
     - [007-Tilemaps](https://github.com/rugbyprof/Mwsu-Mobile-Gaming/blob/master/Lectures/007-Tilemaps.md)
     - [008-Mobile Friendly](https://github.com/rugbyprof/Mwsu-Mobile-Gaming/blob/master/Lectures/008-MobileFriendly.md)
 
+- Requirements:
+    - Create a map using [Tiled](http://www.mapeditor.org/download.html) and incorporate it into your game. Your map MUST differ from the one in the assets folder so that I know you created it yourself.
+    - Add all the changes from "[008-Mobile Friendly](https://github.com/rugbyprof/Mwsu-Mobile-Gaming/blob/master/Lectures/008-MobileFriendly.md)" to make your game mobile ready.
+    - The only required change from the walkthrough is that you will need to find your own arrow images and use those instead. Do not use the arrows provided in the assets folder.
 
