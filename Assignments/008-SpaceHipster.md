@@ -30,6 +30,11 @@ http://github.com/smittyville/Mwsu-2D-Gaming-Smith/<br>
 
 ### Actual Assignment
 
-- Download starter code [here](https://github.com/rugbyprof/Mwsu-Mobile-Gaming/blob/master/Example_code/spacehipster.zip).
-- Game base on a tutorial from [here](https://gamedevacademy.org/html5-phaser-tutorial-spacehipster-a-space-exploration-game/).
-- Helper code to make asteroids collide [here](http://examples.phaser.io/_site/view_full.html?d=arcade%20physics&f=group+vs+self.js&t=group%20vs%20self).
+Were going to use an existing asteroids like game called space hipster as the basis for our weekend assignment. As it stands, space hipster has some pretty ugly "asteroids" that float around without collisions (unless its the player), and the goal is for the placer to fly around and pick up nuggets for points. The ship is a design that doesn have sides, its basically a pulsating square. It doesn't shoot any bullets, and it's method of movement is: click the mouse somewhere and it changes it's angle of movement towards the click. We are going to change many things about this game and make it better. 
+
+
+### Resources
+- Download starter code [here](https://github.com/rugbyprof/Mwsu-Mobile-Gaming/blob/master/Example_code/spacehipster.zip) (click "view raw" to start download). 
+- Game based on a tutorial from [here](https://gamedevacademy.org/html5-phaser-tutorial-spacehipster-a-space-exploration-game/).
+- Helper code to make asteroids collide can be found  [here](http://examples.phaser.io/_site/view_full.html?d=arcade%20physics&f=group+vs+self.js&t=group%20vs%20self).
+- A bullet firing example can be seen [here](http://phaser.io/examples/v2/games/invaders)
