@@ -1,4 +1,3 @@
-# Not Done
 
 ## Space Hipster
 - **Due**: June 19<sup>th</sup> by 11:59 p.m.
