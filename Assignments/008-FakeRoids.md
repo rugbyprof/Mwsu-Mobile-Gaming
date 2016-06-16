@@ -30,4 +30,5 @@ http://github.com/smittyville/Mwsu-2D-Gaming-Smith/<br>
 
 ### Actual Assignment
 
+- https://gamedevacademy.org/html5-phaser-tutorial-spacehipster-a-space-exploration-game/
 - http://examples.phaser.io/_site/view_full.html?d=arcade%20physics&f=group+vs+self.js&t=group%20vs%20self
