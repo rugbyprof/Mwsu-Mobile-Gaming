@@ -30,5 +30,6 @@ http://github.com/smittyville/Mwsu-2D-Gaming-Smith/<br>
 
 ### Actual Assignment
 
-- https://gamedevacademy.org/html5-phaser-tutorial-spacehipster-a-space-exploration-game/
-- http://examples.phaser.io/_site/view_full.html?d=arcade%20physics&f=group+vs+self.js&t=group%20vs%20self
+- Download starter code [here](https://github.com/rugbyprof/Mwsu-Mobile-Gaming/blob/master/Example_code/spacehipster.zip).
+- Game base on a tutorial from [here](https://gamedevacademy.org/html5-phaser-tutorial-spacehipster-a-space-exploration-game/).
+- Helper code to make asteroids collide [here](http://examples.phaser.io/_site/view_full.html?d=arcade%20physics&f=group+vs+self.js&t=group%20vs%20self).
