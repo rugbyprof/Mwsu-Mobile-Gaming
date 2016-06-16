@@ -38,3 +38,27 @@ Were going to use an existing asteroids like game called space hipster as the ba
 - Game based on a tutorial from [here](https://gamedevacademy.org/html5-phaser-tutorial-spacehipster-a-space-exploration-game/).
 - Helper code to make asteroids collide can be found  [here](http://examples.phaser.io/_site/view_full.html?d=arcade%20physics&f=group+vs+self.js&t=group%20vs%20self).
 - A bullet firing example can be seen [here](http://phaser.io/examples/v2/games/invaders)
+- A asteroids ship movement example [here](http://phaser.io/examples/v2/arcade-physics/asteroids-movement)
+
+
+### Requirements
+
+- The number of asteroids at the start of the game is insane, change that to an amount based on the level of the game. Here are some suggestions, but alter them to your liking:
+    - Easy = (25,50) 
+    - Medium (50,150)
+    - Hard (150,250)
+- In your global vars section, have a variable called `skillLevel` that is one of the three settings.
+
+
+- The asteroids are "scaled" in size based on some random value. And the velocity of each is also randomly generated. Both of these random distributions are uniform, and we don't want that.
+    - What we want is to generate more "small" asteroids than large asteroids.
+    - We also want "small" asteroids to have a higher velocity than larger ones.
+- Write a function called `generateAsteroid` (singular) that creates a single asteroid with a random size where small occurs more than large and assigns a velocity accordingly. 
+- Have a variable in your global vars section called `asteroidSize` that ranges from 1 - 100. If the value is 0 all the asteroids generated will be small and if the value is 100 all the asteroids will be large. So 50 would mean about 50/50 between large and small. 
+- We should discuss asteroid size in class a little more.
+
+- Using the asteroids ship movement example, change the existing ship in space hipster to match the one in the example. It doesn't have to be the exact sprite, but it should mimic the behavior.
+
+- Make it so the ship can fire bullets. Not round ones either. You need to use the longer photon looking ones. Why? Because matching the angle to the ship when firing is fun.
+
+- Destroy asteroids when hit by a bullet. Any animation will do (like from our coins game). 
