@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>A Guide to the Phaser State Manager</title>
+        <script src="../../lib/phaser.min.js" type="text/javascript"></script>
+        <script src="StateA.js" type="text/javascript"></script>
+        <script src="StateB.js" type="text/javascript"></script>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+
+        var game = new Phaser.Game(800, 600);
+
+        game.state.add('StateA', MyGame.StateA);
+        game.state.add('StateB', MyGame.StateB);
+
+        game.state.start('StateA');
+
+        </script>
+
+    </body>
+</html>
