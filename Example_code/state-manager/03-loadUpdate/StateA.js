@@ -10,7 +10,7 @@ MyGame.StateA = function (game) {
 MyGame.StateA.prototype = {
 
     init: function () {
-
+        console.log("init");
         var box = this.make.graphics(0, 0);
 
         box.lineStyle(8, 0xFF0000, 0.8);
@@ -27,7 +27,7 @@ MyGame.StateA.prototype = {
     },
 
     preload: function () {
-
+        console.log("preLoad");
         this.load.image('background', '../assets/wave.jpg');
         this.load.image('phaser', '../assets/phaser.png');
 
@@ -46,19 +46,19 @@ MyGame.StateA.prototype = {
     },
 
     fileLoaded: function (progress) {
-
+        console.log("fileLoaded");
         this.text.text = "Loading: " + progress + "%";
 
     },
 
     loadUpdate: function () {
-
+        console.log("loadUpdate");
         this.spinner.rotation += 0.05;
 
     },
 
     create: function () {
-
+        console.log("create");
         //  The load is now finished, loadUpdate won't run any more, so fade out the spinner
 
         this.add.tween(this.spinner.scale).to( { x: 0, y: 0 }, 1000, "Elastic.easeIn", true, 250);
