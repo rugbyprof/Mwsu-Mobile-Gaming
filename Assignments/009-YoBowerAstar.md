@@ -17,5 +17,5 @@
 - Take the `js` from `game.js` and plug that code into the `game.js` file in your new `astar_example` folder.
 
 ### Problems With Yoeman?
-- zip file coming 
+- zip file [here](https://github.com/rugbyprof/Mwsu-Mobile-Gaming/blob/master/Example_code/yo-templates/yo-phaser.zip)
  
