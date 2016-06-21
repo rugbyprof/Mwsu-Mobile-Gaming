@@ -1,10 +1,21 @@
-- As root
-- Install npm on your server `apt-get install npm`
-- Install bower on your server `npm install -g bower`
-- Install yoeman on your server 'npm install -g yo`
 
-- install a generator to install a phaser package on your server at `/var/www/html/astar_example/`
-- copy the code from https://github.com/appsbu-de/phaser_plugin_pathfinding and make the demo work in your new project
+## On Your Server
 
+- Do the following as root
+    - Install npm on your server `apt-get install npm`
+    - Install bower on your server `npm install -g bower`
+    - Install yoeman on your server `npm install -g yo`
+
+### Yoeman 
+
+- Type `yo` at the command line. 
+- Install a generator of your choice.
+- Using that generator, install a phaser package on your server at `/var/www/html/astar_example/`
+   
+### Get Astar Demo
+- Copy the code from https://github.com/appsbu-de/phaser_plugin_pathfinding.
+- Take the `js` from `game.js` and plug that code into the `game.js` file in your new `astar_example` folder.
+
+### Problems With Yoeman?
 - zip file coming 
  
