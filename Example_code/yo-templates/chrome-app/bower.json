@@ -1,0 +1,8 @@
+{
+  "name": "chrome-app",
+  "version": "0.0.0",
+  "dependencies": {
+    "phaser-official": "2.5.0"
+  },
+  "devDependencies": {}
+}
