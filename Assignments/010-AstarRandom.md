@@ -28,7 +28,6 @@ http://www.emanueleferonato.com/2015/07/03/pure-javascript-a-maze-solving-with-a
 #### GameWorld
 - Nagendra Babu Pasupuleti
 - Nanda Kishore Reddy Thineti
-- Clive Matiku
 
 #### Beardgang
 - Christopher James
@@ -37,17 +36,7 @@ http://www.emanueleferonato.com/2015/07/03/pure-javascript-a-maze-solving-with-a
 #### I Hate People
 - Lewis Confair
 
-#### Sundrin Gaming
-- Devin Ritter
-
-#### Wolverines
-- Christian Norfleet
-- Scott Schumacher
-- Damien Moeller
- 
-#### Mighty Morphin' Power Ranger
-- Taylor Kirk
-
-### Zphr Gaming
-- Waseem Azher
-- Mrudula Kosaraju
+#### S.A.D.C.A.N.
+Andrew McKissick
+Aimee Phillips
+Benjamin Shelton
