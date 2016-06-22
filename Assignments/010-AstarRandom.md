@@ -48,16 +48,6 @@ http://www.emanueleferonato.com/2015/07/03/pure-javascript-a-maze-solving-with-a
 #### Mighty Morphin' Power Ranger
 - Taylor Kirk
 
-###SL Gaming
- -Charith Perera
- 
-#### Jtran
-- Johnny Tran
-
-### S0URC3 C0D3
-
-- Muni Bhupathi Dandu
-- Shashnak Namala
-
-#### Now With More Sodium!
-- Sam Kocher
+### Zphr Gaming
+- Waseem Azher
+- Mrudula Kosaraju
