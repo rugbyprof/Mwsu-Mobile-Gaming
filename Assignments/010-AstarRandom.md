@@ -21,3 +21,11 @@ http://www.emanueleferonato.com/2015/07/03/pure-javascript-a-maze-solving-with-a
 ### Game Ideas
 
 - Drop Claymore
+ 
+
+## Teams
+
+#### Team Name
+- person 1
+- person 2
+
