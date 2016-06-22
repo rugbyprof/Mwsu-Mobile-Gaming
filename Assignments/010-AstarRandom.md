@@ -44,7 +44,6 @@ http://www.emanueleferonato.com/2015/07/03/pure-javascript-a-maze-solving-with-a
 - Christian Norfleet
 - Scott Schumacher
 - Damien Moeller
-
-### SOURC3 COD3
-- Muni Bhupathi Dandu
-- Shashank Namala
+ 
+#### Mighty Morphin' Power Ranger
+- Taylor Kirk
