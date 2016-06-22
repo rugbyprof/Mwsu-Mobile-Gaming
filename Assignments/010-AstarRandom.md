@@ -21,6 +21,7 @@ http://www.emanueleferonato.com/2015/07/03/pure-javascript-a-maze-solving-with-a
 ### Game Ideas
 
 - Drop Claymore
+- As the player reaches rooms in your maze, load a tile map for a fight against the enemy who chases you. The enemy can gain new "powers" each time you defeat him.
  
 
 ## Teams
