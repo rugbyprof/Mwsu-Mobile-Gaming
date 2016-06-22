@@ -45,5 +45,5 @@ http://www.emanueleferonato.com/2015/07/03/pure-javascript-a-maze-solving-with-a
 - Scott Schumacher
 - Damien Moeller
 - 
-#### Jtran
-- Johnny Tran
+#### Mighty Morphin' Power Ranger
+- Taylor Kirk
