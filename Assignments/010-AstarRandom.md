@@ -49,4 +49,4 @@ http://www.emanueleferonato.com/2015/07/03/pure-javascript-a-maze-solving-with-a
 - Taylor Kirk
 
 ###SL Gaming
--Charith Perera
+ -Charith Perera
