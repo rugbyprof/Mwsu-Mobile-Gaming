@@ -38,7 +38,7 @@ http://www.emanueleferonato.com/2015/07/03/pure-javascript-a-maze-solving-with-a
 #### I Hate People
 - Lewis Confair
 
-#### Sundrin Gaming
+#### Sundrin Gaming Incorporated
 - Devin Ritter
 
 #### Wolverines
