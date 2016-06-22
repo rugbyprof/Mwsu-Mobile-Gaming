@@ -22,6 +22,10 @@ http://www.emanueleferonato.com/2015/07/03/pure-javascript-a-maze-solving-with-a
 
 - Drop Claymore
 - As the player reaches rooms in your maze, load a tile map for a fight against the enemy who chases you. The enemy can gain new "powers" each time you defeat him.
+- Map visibility
+- - Full visibility in player's immediate view
+- - Memory/partial visibility of areas player has seen before
+- - no visibility of areas player has not yet seen
  
 
 ## Teams
@@ -66,3 +70,8 @@ http://www.emanueleferonato.com/2015/07/03/pure-javascript-a-maze-solving-with-a
 ### DiamondBreakers
 - Cavaughn Browne
 - Rephael Edwards
+ 
+#### SADCAN
+- Aimee Phillips
+- Andrew McKissick
+- Benjamin Shelton
