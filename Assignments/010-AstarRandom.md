@@ -25,7 +25,7 @@ http://www.emanueleferonato.com/2015/07/03/pure-javascript-a-maze-solving-with-a
 
 ## Teams
 
-#### Team Name
-- person 1
-- person 2
+#### GameWorld
+- Nagendra Babu Pasupuleti
+- Nanda Kishore Reddy Thineti
 
