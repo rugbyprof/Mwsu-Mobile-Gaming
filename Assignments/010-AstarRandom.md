@@ -54,7 +54,7 @@ http://www.emanueleferonato.com/2015/07/03/pure-javascript-a-maze-solving-with-a
 #### Jtran
 - Johnny Tran
 
-### S0URC3 COD3
+### S0URC3 C0D3
 
 - Muni Bhupathi Dandu
 - Shashnak Namala
