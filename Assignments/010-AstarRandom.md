@@ -23,9 +23,9 @@ http://www.emanueleferonato.com/2015/07/03/pure-javascript-a-maze-solving-with-a
 - Drop Claymore
 - As the player reaches rooms in your maze, load a tile map for a fight against the enemy who chases you. The enemy can gain new "powers" each time you defeat him.
 - Map visibility
-- - Full visibility in player's immediate view
-- - Memory/partial visibility of areas player has seen before
-- - no visibility of areas player has not yet seen
+    1. Full visibility in player's immediate view
+    2. Memory/partial visibility of areas player has seen before
+    3. no visibility of areas player has not yet seen
 - let the player be able to take a certain number of hits before dying (with a life bar).
  
 
