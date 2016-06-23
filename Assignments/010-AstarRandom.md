@@ -28,6 +28,7 @@ http://www.emanueleferonato.com/2015/07/03/pure-javascript-a-maze-solving-with-a
     3. no visibility of areas player has not yet seen
 - let the player be able to take a certain number of hits before dying (with a life bar).
 - Have random power ups that the player can pickup in the dungeon. Examples: invisibility, shield, speed up, slow down time/stop time.
+- The player can move faster (run), which depletes stamina points (or stamina bar) that regenerates slowly.
  
 
 ## Teams
