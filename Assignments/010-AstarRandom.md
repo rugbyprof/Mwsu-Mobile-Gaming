@@ -30,6 +30,7 @@ http://www.emanueleferonato.com/2015/07/03/pure-javascript-a-maze-solving-with-a
 - Have random power ups that the player can pickup in the dungeon. Examples: invisibility, shield, speed up, slow down time/stop time.
 - The player can move faster (run), which depletes stamina points (or stamina bar) that regenerates slowly.
 - multiple types of attacks i.e ranged, spells, melee
+- item drops from enemies for power ups or amor/equipment
  
 
 ## Teams
