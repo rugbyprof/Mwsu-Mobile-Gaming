@@ -33,6 +33,7 @@ http://www.emanueleferonato.com/2015/07/03/pure-javascript-a-maze-solving-with-a
 - item drops from enemies for power ups or amor/equipment
 - enemy can drop boom
 - add a supper enemy(mave faster)
+- player must move toward a goal; enemy generation is centered around the goal. (think capture the flag)
  
 
 ## Teams
