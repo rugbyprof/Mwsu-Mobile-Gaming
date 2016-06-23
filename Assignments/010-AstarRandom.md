@@ -26,7 +26,7 @@ http://www.emanueleferonato.com/2015/07/03/pure-javascript-a-maze-solving-with-a
 - - Full visibility in player's immediate view
 - - Memory/partial visibility of areas player has seen before
 - - no visibility of areas player has not yet seen
-- let the player be able to take a certain number of hits before dying
+- let the player be able to take a certain number of hits before dying (with a life bar).
  
 
 ## Teams
