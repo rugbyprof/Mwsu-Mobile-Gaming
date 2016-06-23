@@ -38,6 +38,7 @@ http://www.emanueleferonato.com/2015/07/03/pure-javascript-a-maze-solving-with-a
 - Some enemies take different number of hits as well, might resist others if different types of attacks. 
 - Walls could be breached by repeated weapon hits OR certain sections of wall could be booby-trapped to explode if hit by         weapon, killing any sprite within a defined radius. (or a combination of the two)
 - Easy/Hard difficulty. Could affect number of enemies, visibility, how aggressive the enemies are, etc
+- A finite number of charges to break wall tile.
 
 
 ## Teams
