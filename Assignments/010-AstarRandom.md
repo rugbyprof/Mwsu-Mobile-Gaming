@@ -40,6 +40,7 @@ http://www.emanueleferonato.com/2015/07/03/pure-javascript-a-maze-solving-with-a
 - Easy/Hard difficulty. Could affect number of enemies, visibility, how aggressive the enemies are, etc
 - A finite number of charges to break wall tile.
 - After collecting a number of key items, the player goes into a game breaker state and is able to break through walls
+- Have a couple doors that when the player walks through one of them it teleports them to another door
 
 
 ## Teams
