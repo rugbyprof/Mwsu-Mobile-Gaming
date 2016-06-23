@@ -34,6 +34,7 @@ http://www.emanueleferonato.com/2015/07/03/pure-javascript-a-maze-solving-with-a
 - enemy can drop boom
 - add a supper enemy(mave faster)
 - player must move toward a goal; enemy generation is centered around the goal. (think capture the flag)
+- have enemy randomly teleport after a period of time (closer of course to block your path)
  
 
 ## Teams
