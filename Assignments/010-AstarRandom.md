@@ -59,6 +59,7 @@ http://www.emanueleferonato.com/2015/07/03/pure-javascript-a-maze-solving-with-a
 
 #### Sundrin Gaming Incorporated
 - Devin Ritter
+- Sam Kocher
 
 #### Wolverines
 - Christian Norfleet
@@ -78,9 +79,6 @@ http://www.emanueleferonato.com/2015/07/03/pure-javascript-a-maze-solving-with-a
 
 - Muni Bhupathi Dandu
 - Shashnak Namala
-
-#### Now With More Sodium!
-- Sam Kocher
 
 ### DiamondBreakers
 - Cavaughn Browne
