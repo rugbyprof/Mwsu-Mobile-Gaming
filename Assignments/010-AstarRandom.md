@@ -42,6 +42,7 @@ http://www.emanueleferonato.com/2015/07/03/pure-javascript-a-maze-solving-with-a
 - After collecting a number of key items, the player goes into a game breaker state and is able to break through walls
 - After killing certain number of enemies, the player gets random powers like breaking the walls, shield that protects the player from the enemies for a specific time.
 - Filling up random room (created with loop of tiles) with 2-3 enemies and a life coin. Adding a power up coin which makes player walk through the walls but not the enemies for specific amount of time (say 5 or 10 seconds) which will be usefull to collect the life coin inside the room.
+- Have camera zoomed and centered to create a more immersive experience
 
 
 ## Teams
