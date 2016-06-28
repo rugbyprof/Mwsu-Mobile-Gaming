@@ -17,11 +17,11 @@ We can't get away from managing packages, so ....
 
 https://www.sitepoint.com/beginners-guide-node-package-manager/
 
-### Guide to eureca.io 
+### Guide to sockets.io 
 
 This is a Bidirectional RPC (remote procedure call) library. That combine with node, can server our purposes.
 
-http://eureca.io/doc/tutorial-000%20-%20Hello%20world.html
+http://rawkes.com/articles/creating-a-real-time-multiplayer-game-with-websockets-and-node.html
 
 ### Monit
 
