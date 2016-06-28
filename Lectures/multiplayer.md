@@ -17,32 +17,11 @@ We can't get away from managing packages, so ....
 
 https://www.sitepoint.com/beginners-guide-node-package-manager/
 
-### Guide to sockets.io 
 
-This is a Bidirectional RPC (remote procedure call) library. That combine with node, can server our purposes.
-
-http://socket.io/get-started/chat/
-
-http://rawkes.com/articles/creating-a-real-time-multiplayer-game-with-websockets-and-node.html
 
 ### Eureca.io
 
 http://eureca.io/
-
-### Monit
-
-```bash
-check process tanks with pidfile "/var/run/tanks.pid"
-    start program = "/sbin/start tanks" with timeout 30 seconds
-    stop program = "/sbin/stop tanks"
-    if failed
-        port 10000
-        protocol HTTP
-        request "/index.html"
-	with timeout 7 seconds
-    then restart
-```
-
 
 ### Upstart
 
@@ -73,15 +52,40 @@ pre-stop script
 end script
 ```
 
-https://developer.valvesoftware.com/wiki/Latency_Compensating_Methods_in_Client/Server_In-game_Protocol_Design_and_Optimization#Client_Side_Prediction
+### Monit
 
+```bash
+check process tanks with pidfile "/var/run/tanks.pid"
+    start program = "/sbin/start tanks" with timeout 30 seconds
+    stop program = "/sbin/stop tanks"
+    if failed
+        port 10000
+        protocol HTTP
+        request "/index.html"
+	with timeout 7 seconds
+    then restart
+```
+
+
+
+
+
+
+
+### Guide to sockets.io 
+
+This is a Bidirectional RPC (remote procedure call) library. That combine with node, can server our purposes.
 
 http://socket.io/get-started/chat/
 
+http://rawkes.com/articles/creating-a-real-time-multiplayer-game-with-websockets-and-node.html
 
-### Protocol Tradoffs
+
+
+### Notables
 
 http://blogs.shephertz.com/2013/01/28/picking-the-right-communication-protocol-for-your-game/
 
+https://developer.valvesoftware.com/wiki/Latency_Compensating_Methods_in_Client/Server_In-game_Protocol_Design_and_Optimization#Client_Side_Prediction
 
 https://github.com/xicombd/phaser-multiplayer-game/tree/a3aa46e1b86aa82f331fcd658caec92c3f3248df
