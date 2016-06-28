@@ -32,6 +32,27 @@ upstart to create a "command" that will start and stop our little game server.
 
 http://blog.terminal.com/getting-started-with-upstart/
 
+```bash
+description "Eureca game server script"
+author "Griffin"
+
+start on startup
+stop on shutdown
+
+script
+    echo $$ > /var/run/eureca_server.pid
+    /usr/bin/node /var/www/html/eureca_server/server.js
+end script
+
+pre-start script
+    echo "[`date`] Starting Eureca Server" >> /var/log/eureca_server.log
+end script
+
+pre-stop script
+    rm /var/run/eureca_server.pid
+    echo "[`date`] Stopping Eureca Server" >> /var/log/eureca_server.log
+end script
+```
 
 https://developer.valvesoftware.com/wiki/Latency_Compensating_Methods_in_Client/Server_In-game_Protocol_Design_and_Optimization#Client_Side_Prediction
 
