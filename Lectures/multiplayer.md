@@ -71,3 +71,8 @@ https://developer.valvesoftware.com/wiki/Latency_Compensating_Methods_in_Client/
 
 
 http://socket.io/get-started/chat/
+
+
+### Protocol Tradoffs
+
+http://blogs.shephertz.com/2013/01/28/picking-the-right-communication-protocol-for-your-game/
