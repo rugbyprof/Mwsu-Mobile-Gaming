@@ -31,3 +31,6 @@ Upstart helps us manage services that get started at boot time or stopped when s
 upstart to create a "command" that will start and stop our little game server.
 
 http://blog.terminal.com/getting-started-with-upstart/
+
+
+https://developer.valvesoftware.com/wiki/Latency_Compensating_Methods_in_Client/Server_In-game_Protocol_Design_and_Optimization#Client_Side_Prediction
