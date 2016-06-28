@@ -25,6 +25,19 @@ http://eureca.io/doc/tutorial-000%20-%20Hello%20world.html
 
 ### Monit
 
+```bash
+check process tanks with pidfile "/var/run/tanks.pid"
+    start program = "/sbin/start tanks" with timeout 30 seconds
+    stop program = "/sbin/stop tanks"
+    if failed
+        port 10000
+        protocol HTTP
+        request "/index.html"
+	with timeout 7 seconds
+    then restart
+```
+
+
 ### Upstart
 
 Upstart helps us manage services that get started at boot time or stopped when shutting down (simply put). We will use 
