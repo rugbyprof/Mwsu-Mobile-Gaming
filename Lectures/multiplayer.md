@@ -1,7 +1,7 @@
-## Just Notes
+## Multiplayer Start Pack
 
+#### Requirements
 1. You need a game :)
-2. You want to make it multiplayer.
 3. You need a server (unless your going peer to peer or (P2P)).
 4. You need to have code on the server listening for:
     - new players
@@ -11,13 +11,12 @@
 6. Server will only accept predefined commands (for security).
 7. Your client will also have to accept info from server (like other players actions) and update its own game state.
 
+
 ### Node Package Manager
 
 We can't get away from managing packages, so ....
 
 https://www.sitepoint.com/beginners-guide-node-package-manager/
-
-
 
 ### Eureca.io
 
@@ -65,10 +64,6 @@ check process tanks with pidfile "/var/run/tanks.pid"
 	with timeout 7 seconds
     then restart
 ```
-
-
-
-
 
 
 
