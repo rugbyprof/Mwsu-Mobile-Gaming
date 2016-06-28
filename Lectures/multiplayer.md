@@ -76,3 +76,6 @@ http://socket.io/get-started/chat/
 ### Protocol Tradoffs
 
 http://blogs.shephertz.com/2013/01/28/picking-the-right-communication-protocol-for-your-game/
+
+
+https://github.com/xicombd/phaser-multiplayer-game/tree/a3aa46e1b86aa82f331fcd658caec92c3f3248df
