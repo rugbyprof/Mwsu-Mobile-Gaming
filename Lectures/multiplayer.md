@@ -21,6 +21,8 @@ https://www.sitepoint.com/beginners-guide-node-package-manager/
 
 This is a Bidirectional RPC (remote procedure call) library. That combine with node, can server our purposes.
 
+http://socket.io/get-started/chat/
+
 http://rawkes.com/articles/creating-a-real-time-multiplayer-game-with-websockets-and-node.html
 
 ### Monit
