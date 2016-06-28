@@ -34,3 +34,6 @@ http://blog.terminal.com/getting-started-with-upstart/
 
 
 https://developer.valvesoftware.com/wiki/Latency_Compensating_Methods_in_Client/Server_In-game_Protocol_Design_and_Optimization#Client_Side_Prediction
+
+
+http://socket.io/get-started/chat/
