@@ -29,6 +29,8 @@ upstart to create a "command" that will start and stop our little game server.
 
 http://blog.terminal.com/getting-started-with-upstart/
 
+The file below would be placed in `/etc/init/somfilename.conf` (assuming Ubuntu)
+
 ```bash
 description "Eureca game server script"
 author "Griffin"
