@@ -1,0 +1,13 @@
+.*
+*.log
+Thumbs.db
+
+dist
+build
+node_modules
+bower_components
+
+!.git*
+!.babelrc
+!.eslintrc
+!.editorconfig
