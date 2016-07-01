@@ -44,3 +44,6 @@ At present the example code [here](https://github.com/rugbyprof/Mwsu-Mobile-Gami
 
 To run your game, I will clone your repository and run it locally on my machine. Therefore be extra sure that your code is in each team members repository.
 
+### Brackets
+
+There is a **Brackets** plugin that will let you run `node` locally on your machine. Of course `node` needs to be installed (in gitbash for example). Here is a link to the plugin on github: https://github.com/Acconut/brackets-nodejs. It has instructions on how to install and use. 
