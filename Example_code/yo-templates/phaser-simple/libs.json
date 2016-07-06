@@ -1,5 +1,0 @@
-{
-    "phaser.js":        "../node_modules/phaser/dist/phaser.js",
-    "phaser.min.js":    "../node_modules/phaser/dist/phaser.min.js",
-    "phaser.map":       "../node_modules/phaser/dist/phaser.map"
-}
