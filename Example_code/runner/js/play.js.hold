@@ -1,0 +1,220 @@
+
+//====================================================================
+
+var playState = {
+    init: function(){
+        //Add the server client for multiplayer
+        this.client = new Eureca.Client();
+        
+        game.global.playerReady = false;
+
+        game.global.dude = false;
+
+    },
+
+    update: function() {
+    	if (!game.global.dude) 
+    	    return;
+    	    
+        
+        game.global.dude.update();
+
+
+    },
+    create: function(){
+        this.initMultiPlayer(game,game.global);
+        
+        this.upKey = game.input.keyboard.addKey(Phaser.Keyboard.UP);
+        this.downKey = game.input.keyboard.addKey(Phaser.Keyboard.DOWN);
+        this.leftKey = game.input.keyboard.addKey(Phaser.Keyboard.LEFT);
+        this.rightKey = game.input.keyboard.addKey(Phaser.Keyboard.RIGHT);
+    },
+    initMultiPlayer: function(game,globals){
+        
+        //Reference to our eureca so we can call functions back on the server
+        var eurecaProxy;
+        
+        
+        this.client.onConnect(function (connection) {
+            console.log('Incoming connection', connection);
+            
+        });
+
+        this.client.ready(function (serverProxy) {
+             //Connect our local var to the reference sent from the server
+             eurecaProxy = serverProxy;
+
+        });
+
+        this.client.exports.setId = function(id){
+            console.log("Setting Id:" + id);
+
+            //create() is moved here to make sure nothing is created before uniq id assignation
+            globals.myId = id;
+            
+            globals.dude = new player(id, game,eurecaProxy);
+            
+            globals.playerList[id] = globals.dude;
+            
+            eurecaProxy.initPlayer(id,globals.dude);
+            
+            console.log(globals.playerList);
+
+            globals.playerReady = true;
+            
+            eurecaProxy.handshake();
+            
+
+            
+        }
+
+        this.client.exports.kill = function(id){	
+            if (globals.playerList[id]) {
+                globals.playerList[id].kill();
+                console.log('killing ', id, globals.playerList[id]);
+            }
+        }	
+
+        this.client.exports.spawnEnemy = function(id, enemy){
+            
+            if (id == globals.myId){
+                return; //this is me
+            }
+
+            console.log('Spawning New Player');
+            
+            console.log(enemy);
+    
+            globals.playerList[id] = enemy;
+            
+            //enemy.init()
+            
+            console.log(globals.playerList);
+
+        }
+
+        this.client.exports.updateState = function(id,player_state){
+            console.log(player_state);
+            if(globals.myId == id){
+                return;
+            }
+            if (globals.playerList[id])  {
+                globals.playerList[id].state = player_state;
+            }
+         }
+         
+        
+    },
+    
+    render: function(){
+       
+    },
+    startMenu: function() {
+        game.state.start('menu');
+    },
+};
+
+var player = function (index, game,proxyServer) {
+    
+    var x;                      // x coord
+    var y;                      // y coord
+    
+    var player_id;
+    
+    var alive;                  // player alive or dead
+    var state;                  // state info about player
+    var proxy;                  // reference to proxy server
+    
+    var tint;                   // player tint
+
+    var upKey;                  //references to movement keys
+    var downKey;
+    var leftKey;
+    var rightKey;
+
+    var health;                 // player health         
+	
+    function init(index, game,proxyServer){
+    
+        proxy = proxyServer;
+    
+        sprite = game.add.sprite(x, y, 'dude');
+    
+        upKey = game.input.keyboard.addKey(Phaser.Keyboard.UP);
+        downKey = game.input.keyboard.addKey(Phaser.Keyboard.DOWN);
+        leftKey = game.input.keyboard.addKey(Phaser.Keyboard.LEFT);
+        rightKey = game.input.keyboard.addKey(Phaser.Keyboard.RIGHT);
+
+        health = 30;
+	    
+        state = {};
+        x = 0;
+        y = 0;
+        alive = true;
+        tint = Math.random() * 0xffffff;
+        sprite.tint = tint;
+        sprite.id = index;
+        state.alive = true;
+        
+    };
+    
+    function updateState (state){
+
+//         if(game.time.time % 3000000 == 0){
+//             console.log(game.time.time);
+//             for(s in state){
+//                 console.log(state[s]);
+//             }
+//         }
+    };
+
+    function update() {
+        state.tint = tint;
+        state.x = sprite.x;
+        state.y = sprite.y;
+        state.alive = alive;
+        state.health = health;
+    
+    
+        proxy.handleState(state);
+
+        if (upKey.isDown)
+        {
+            sprite.y-=3;
+        }
+        else if (downKey.isDown)
+        {
+            sprite.y+=3;
+        }
+
+        if (leftKey.isDown)
+        {
+            sprite.x-=3;
+        }
+        else if (rightKey.isDown)
+        {
+            sprite.x+=3;
+        } 
+    
+        old_x = sprite.x;
+        old_y = sprite.y;
+    };
+    
+    function render() {
+        game.debug.text( "This is debug text", 100, 380 );
+    };
+
+    function kill() {
+        alive = false;
+        sprite.kill();
+    };
+    
+    init(index, game,proxyServer);
+    
+    return {
+        render : render,
+        updateState : updateState,
+        update : update,
+        kill : kill
+    };
+};
