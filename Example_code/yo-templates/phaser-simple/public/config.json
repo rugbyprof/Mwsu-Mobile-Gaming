@@ -1,0 +1,16 @@
+{
+    "game": {
+        "width": 800,
+        "height": 480,
+        "background_color": "#000000",
+        "dom_element_id": "__game__",
+        "host": "http://localhost:5000/",
+        "font": "Boxy-Bold",
+        "font_size": 8
+    },
+    "preload": {
+        "bitmapFont": {
+            "Boxy-Bold":    ["assets/fonts/boxy_bold_8.png", "assets/fonts/boxy_bold_8.xml"]
+        }
+    }
+}
