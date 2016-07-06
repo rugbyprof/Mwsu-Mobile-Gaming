@@ -56,7 +56,7 @@ var BodyDirection = {
 
     update: function () {
         
-        this.angleLine.fromAngle(this.ship.x, this.ship.y, this.ship.body.angle, this.ship.body.speed / 2);
+        this.angleLine.fromAngle(this.ship.x, this.ship.y, this.ship.body.angle, this.ship.body.speed / 1);
         
         
         this.ship.rotation = this.ship.body.angle;
