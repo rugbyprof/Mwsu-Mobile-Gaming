@@ -20,7 +20,7 @@ MyGame.StateA.prototype = {
 
         this.load.image('background', '../assets/wave.jpg');
         this.load.image('phaser', '../assets/phaser.png');
-        this.load.image('yuzuki', '../assets/yuzuki_yukari_by_vali233.png');
+        this.load.image('yuzuki', '../assets/yuzuki_yukari_by_vali233_50.png');
 
     },
 

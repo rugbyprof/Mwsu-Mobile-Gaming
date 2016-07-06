@@ -10,7 +10,6 @@ MyGame.StateA = function (game) {
 MyGame.StateA.prototype = {
 
     init: function () {
-        console.log("init");
         var box = this.make.graphics(0, 0);
 
         box.lineStyle(8, 0xFF0000, 0.8);
@@ -27,8 +26,9 @@ MyGame.StateA.prototype = {
     },
 
     preload: function () {
-        console.log("preLoad");
+        console.log("one");
         this.load.image('background', '../assets/wave.jpg');
+        console.log("two");
         this.load.image('phaser', '../assets/phaser.png');
 
         //  Fake the loading of images so you can see what's going on with loadUpdate
@@ -36,29 +36,28 @@ MyGame.StateA.prototype = {
         //  Enable network throttling in Chrome Dev Tools to see the result.
         //  I suggest a speed of Regular 4G (4 Mbps)
 
-        for (var i = 0; i < 20; i++)
+        for (var i = 0; i < 200; i++)
         {
+            console.log(i);
             this.load.image('asuna' + i, '../assets/asuna_sao_by_vali233.png?rnd=' + i);
         }
 
         this.load.onFileComplete.add(this.fileLoaded, this);
 
     },
-
+    
     fileLoaded: function (progress) {
-        console.log("fileLoaded");
+        console.log(progress)
         this.text.text = "Loading: " + progress + "%";
 
     },
 
     loadUpdate: function () {
-        console.log("loadUpdate");
         this.spinner.rotation += 0.05;
 
     },
 
     create: function () {
-        console.log("create");
         //  The load is now finished, loadUpdate won't run any more, so fade out the spinner
 
         this.add.tween(this.spinner.scale).to( { x: 0, y: 0 }, 1000, "Elastic.easeIn", true, 250);
