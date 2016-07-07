@@ -3,6 +3,9 @@
  <tileset firstgid="1" name="roads-grass" tilewidth="40" tileheight="40" spacing="40" margin="40" tilecount="35" columns="5">
   <image source="../../../../Mwsu-Mobile-Gaming-Private/multiConnect/assets/roads-grass.bmp" trans="ffffff" width="440" height="600"/>
  </tileset>
+ <tileset firstgid="36" name="cliff" tilewidth="40" tileheight="40" spacing="40" margin="40" tilecount="48" columns="8">
+  <image source="../../../../Mwsu-Mobile-Gaming-Private/multiConnect/assets/cliff.png" width="640" height="480"/>
+ </tileset>
  <layer name="roads-layer" width="50" height="50">
   <data encoding="csv">
 24,24,24,24,24,24,24,24,24,24,24,24,11,12,10,8,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,
