@@ -16,6 +16,6 @@ I will use a checklist (rubric) to grade each program, so there will be no negot
 
 ### Your Grade
 
-You will know your grade when the meeting is over, **however** I will still check for collusion between students and or groups. In the case that you are found to be colluding with other students (not in your group) will receive an "F" in the course.
+You will know your grade when the meeting is over, **however** I will still check for collusion between students and or groups. In the case that you are found to be colluding with other students (not in your group) you (and possibly a whole group) will receive an "F" in the course.
 
 
