@@ -1,5 +1,5 @@
 ### Program 4
-- Global var called skillLevel is one of the three settings
+- Global var called skillLevel is one of the three settings: easy medium or hard and has an impact on how many asteroids are generated.
 - Asteroids are "scaled" in size based on some random value. 
 - The velocity of each asteroid is randomly generated. 
 - More "small" asteroids than large asteroids are generated
