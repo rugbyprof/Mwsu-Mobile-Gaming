@@ -1,3 +1,6 @@
+### General
+- All programs below still need to be on github and follow general program requirements.
+
 ### Program 4
 - Global var called skillLevel is one of the three settings: easy medium or hard and has an impact on how many asteroids are generated.
 - Asteroids are "scaled" in size based on some random value. 
