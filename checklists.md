@@ -1,3 +1,16 @@
+### Program 4
+- Global var called skillLevel is one of the three settings
+- Asteroids are "scaled" in size based on some random value. 
+- The velocity of each asteroid is randomly generated. 
+- More "small" asteroids than large asteroids are generated
+- Velocity is based on size of the asteroids
+- There is a function called generateAsteroid (singular) that creates a single asteroid with a random size where small occurs more than large and assigns a velocity accordingly.
+- Have a variable in your global vars section called asteroidSize that ranges from 1 - 100 and controls the distribution of asteroid sizes.
+- Ship moves like the tradition asteroid game (rotates 360 degrees, and thrusts in the direction its pointing)
+- The ship sprite is different than the tutorial
+- The ship fires long bullets correctly oriented 
+- Destroy asteroids when hit by a bullet. Any animation will do (like from our coins game).
+
 ### Program 5
 - A randomly generated tilemap is generated
 - Every re-load of the game creates a new instance in a random configuration with an entrance and exit
