@@ -1,3 +1,9 @@
+### Program 5
+- A randomly generated tilemap is generated
+- Every re-load of the game creates a new instance in a random configuration with an entrance and exit
+- A player (sprite) is loaded onto the map and can move around in the passageways
+- Collision between sprite and walls must occur
+
 ### Program 6
 - A player (dude) shows up on each instance of the game 
 - The player is the same color of all instances
