@@ -18,6 +18,7 @@
 - Add another level such that:
     - When the player drops through the floor it will start the new level
     - The new level will look noticeably different from the previous level
+    - Same tileset is ok
     - The new level will show the current score (not zero)
 - When the player dies, the combined score (a total) from both levels will show. 
     - Basically don't lose the score between levels or when the game ends. 
