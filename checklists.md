@@ -1,4 +1,9 @@
-
+### Program 6
+- A player (dude) shows up on each instance of the game 
+- The player is the same color of all instances
+- When the original player moves, it is mirrored on each instance of the game
+- Performance like lag or jerky behavior is ok
+- Collision or addtional methods implemented is extra credit.
 
 ### Program 7
 - A character that moves around and captures coins
